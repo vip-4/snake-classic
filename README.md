@@ -137,7 +137,8 @@ Nginx、Apache、对象存储（OSS / COS / S3）、Vercel 均可。只需保证
 - [ ] 确认正式域名可访问，HTTPS 正常
 - [ ] 在 [Google Rich Results Test](https://search.google.com/test/rich-results) 验证 VideoGame / FAQPage / HowTo 结构化数据
 - [ ] 在 [Schema Markup Validator](https://validator.schema.org/) 检查 JSON-LD
-- [ ] 提交 `sitemap.xml` 到 Google Search Console 与 Bing Webmaster Tools
+- [x] 提交 `sitemap.xml` 到 Bing Webmaster Tools（站点已验证，sitemap 已提交）
+- [ ] 提交 `sitemap.xml` 到 Google Search Console
 - [ ] 用 Lighthouse 检查 Performance / Accessibility / Best Practices / SEO
 - [ ] 用手机实际测试滑动转向与方向键
 - [ ] 检查 `https://你的域名/llms.txt`、`/robots.txt`、`/sitemap.xml` 可访问
@@ -150,6 +151,7 @@ Nginx、Apache、对象存储（OSS / COS / S3）、Vercel 均可。只需保证
 - Open Graph + Twitter Card + 1200×630 PNG 分享图
 - `VideoGame`、`FAQPage`、`HowTo`、`WebSite`、`WebPage`、`Organization` 的 JSON-LD `@graph`
 - `sitemap.xml`、`robots.txt`、`manifest.webmanifest`
+- Bing Webmaster Tools 站点验证（`msvalidate.01` meta 标签）
 - 内部锚点导航、可抓取的正文内容、来源外链
 - 移动端响应式、Core Web Vitals 友好（无外部字体/脚本、资源极小）
 - 404 页面 `noindex`
