@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>贪吃蛇经典版 - 免费在线玩的开源轻量级游戏 | Snake Classic</title>
+  <meta name="description" content="免费在线玩经典贪吃蛇：20×15 网格、穿墙规则、本地最高分，支持键盘与手机触屏。无需下载、无需登录，开源 MIT 协议，纯静态页面秒开。">
+  <meta name="keywords" content="贪吃蛇,贪吃蛇在线玩,贪吃蛇经典版,snake game,free browser game,开源游戏,轻量级游戏,HTML5 游戏">
+  <meta name="author" content="Snake Classic">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b1020">
+  <link rel="canonical" href="https://vip-4.github.io/snake-classic/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="贪吃蛇经典版">
+  <meta property="og:title" content="贪吃蛇经典版 - 免费在线玩的开源轻量级游戏">
+  <meta property="og:description" content="打开网页就能玩。20×15 网格、穿墙规则、本地最高分，支持键盘与手机触屏，无需下载或登录。">
+  <meta property="og:url" content="https://vip-4.github.io/snake-classic/">
+  <meta property="og:image" content="https://vip-4.github.io/snake-classic/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="贪吃蛇经典版游戏画面，绿色蛇身与红色食物">
+  <meta property="og:locale" content="zh_CN">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="贪吃蛇经典版 - 免费在线玩的开源轻量级游戏">
+  <meta name="twitter:description" content="打开网页就能玩。20×15 网格、穿墙规则、本地最高分，支持键盘与手机触屏。">
+  <meta name="twitter:image" content="https://vip-4.github.io/snake-classic/assets/og-image.png">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="assets/style.css?v=20261026-3">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://vip-4.github.io/snake-classic/#website",
+        "url": "https://vip-4.github.io/snake-classic/",
+        "name": "贪吃蛇经典版",
+        "alternateName": "Snake Classic",
+        "description": "免费、开源、轻量级的浏览器贪吃蛇游戏。",
+        "inLanguage": "zh-CN",
+        "publisher": { "@id": "https://vip-4.github.io/snake-classic/#publisher" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://vip-4.github.io/snake-classic/#publisher",
+        "name": "Snake Classic",
+        "url": "https://vip-4.github.io/snake-classic/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://vip-4.github.io/snake-classic/assets/icon-512.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://vip-4.github.io/snake-classic/#webpage",
+        "url": "https://vip-4.github.io/snake-classic/",
+        "name": "贪吃蛇经典版 - 免费在线玩的开源轻量级游戏",
+        "isPartOf": { "@id": "https://vip-4.github.io/snake-classic/#website" },
+        "about": { "@id": "https://vip-4.github.io/snake-classic/#game" },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://vip-4.github.io/snake-classic/assets/og-image.png",
+          "width": 1200,
+          "height": 630
+        },
+        "datePublished": "2026-10-26",
+        "dateModified": "2026-10-26",
+        "inLanguage": "zh-CN",
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".answer-box", ".faq-answer"]
+        }
+      },
+      {
+        "@type": "VideoGame",
+        "@id": "https://vip-4.github.io/snake-classic/#game",
+        "name": "贪吃蛇经典版",
+        "alternateName": "Snake Classic",
+        "description": "一个免费、开源、零依赖的浏览器贪吃蛇游戏。20×15 网格、150 毫秒移动间隔、穿墙规则、本地最高分，支持键盘与触屏。",
+        "url": "https://vip-4.github.io/snake-classic/",
+        "image": "https://vip-4.github.io/snake-classic/assets/og-image.png",
+        "genre": ["Arcade", "Casual", "Puzzle"],
+        "gamePlatform": ["Web browser", "Desktop", "Mobile"],
+        "applicationCategory": "Game",
+        "operatingSystem": "Any",
+        "playMode": "SinglePlayer",
+        "numberOfPlayers": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 1 },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "CNY",
+          "availability": "https://schema.org/InStock"
+        },
+        "license": "https://opensource.org/licenses/MIT",
+        "author": { "@id": "https://vip-4.github.io/snake-classic/#publisher" },
+        "publisher": { "@id": "https://vip-4.github.io/snake-classic/#publisher" },
+        "datePublished": "2026-10-26",
+        "dateModified": "2026-10-26",
+        "inLanguage": "zh-CN",
+        "isAccessibleForFree": true
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://vip-4.github.io/snake-classic/#howto",
+        "name": "如何玩贪吃蛇经典版",
+        "description": "用方向键或触屏控制蛇，吃掉食物并避免撞到自己。",
+        "totalTime": "PT1M",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "开始游戏",
+            "text": "点击页面中的“开始游戏”按钮，或直接按方向键。"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "控制方向",
+            "text": "使用方向键或 WASD 转向；手机可滑动画面或点击屏幕方向键。"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "吃掉食物",
+            "text": "让蛇头碰到红色食物，每次加 10 分并增长一格。"
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "避免自撞",
+            "text": "蛇头撞到自己的身体即游戏结束；越过边界会从对侧穿出。"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://vip-4.github.io/snake-classic/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "贪吃蛇经典版是免费的吗？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "是。游戏完全免费，没有广告、内购或付费墙，也不需要注册账号。代码以 MIT 协议开源。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "可以在手机上玩吗？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "可以。页面采用响应式布局，手机和平板可直接游玩；支持在游戏画面上滑动转向，也可以点击屏幕下方的方向键。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "需要下载或安装吗？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "不需要下载。游戏是纯静态网页，打开即玩；在支持的浏览器中还可以“添加到主屏幕”，首次加载后可离线游玩。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "最高分会保存在哪里？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "最高分保存在浏览器本地存储（localStorage）中，不会上传到服务器。清除浏览器数据或更换设备后记录会丢失。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "游戏用了什么技术？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "使用原生 HTML、CSS、JavaScript 和 Canvas 2D 绘制，没有任何第三方框架或运行时依赖。首屏 HTML/CSS/JS 约 66 KB，gzip 后约 18 KB。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "可以二次开发或商用吗？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "可以。代码采用 MIT 许可证，允许修改、分发和商业使用，只需保留版权与许可声明；页面文字内容采用 CC BY 4.0，转载时请注明来源。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "为什么选择 Simple Game Tutorials 的 Snake？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "在 itch.io 开源标签、GitHub Trending、Ludum Dare 作品和 Simple Game Tutorials 四个来源中，该教程的 Snake 规则完整、代码属于公有领域、体积极小且适合浏览器重写，最符合“轻量级静态游戏”的筛选标准。"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="./" aria-label="贪吃蛇经典版首页">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <rect x="2" y="2" width="28" height="28" rx="7" fill="#101a33"/>
+          <rect x="7" y="18" width="6" height="6" rx="1.6" fill="#7cff6b"/>
+          <rect x="13" y="18" width="6" height="6" rx="1.6" fill="#7cff6b"/>
+          <rect x="13" y="12" width="6" height="6" rx="1.6" fill="#a8ff9c"/>
+          <rect x="19" y="12" width="6" height="6" rx="1.6" fill="#7cff6b"/>
+          <circle cx="23" cy="7" r="2.4" fill="#ff5a7a"/>
+        </svg>
+        <span class="brand-text">SNAKE<em>CLASSIC</em></span>
+      </a>
+      <nav aria-label="主导航">
+        <a href="#play">开始游戏</a>
+        <a href="#howto">玩法</a>
+        <a href="#faq">常见问题</a>
+        <a href="#sources">来源</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> 开源 · 纯静态 · 零依赖</p>
+        <h1 id="hero-title">贪吃蛇经典版 <span class="grad">免费在线玩的轻量级游戏</span></h1>
+        <p class="lede">不用下载、不用登录。打开网页就能玩的经典 Snake：20×15 网格、穿墙规则、本地最高分，支持键盘和手机触屏。</p>
+        <p class="en-line" lang="en">A free, open-source, dependency-free Snake game that runs instantly in your browser.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#play">立即开玩</a>
+          <a class="btn btn-ghost" href="#howto">查看玩法</a>
+        </div>
+        <ul class="stats" aria-label="游戏特性">
+          <li><strong>20×15</strong><span>经典网格</span></li>
+          <li><strong>150ms</strong><span>每步间隔</span></li>
+          <li><strong>0</strong><span>第三方依赖</span></li>
+          <li><strong>MIT</strong><span>开源协议</span></li>
+        </ul>
+      </div>
+
+      <div class="game-panel" id="play">
+        <div class="hud">
+          <div class="hud-item">
+            <span>得分</span>
+            <strong id="score">0</strong>
+          </div>
+          <div class="hud-item">
+            <span>最高分</span>
+            <strong id="best">0</strong>
+          </div>
+          <div class="hud-actions">
+            <button class="icon-btn" id="pause" type="button" aria-pressed="false" title="暂停或继续">
+              <span aria-hidden="true" id="pause-icon">❚❚</span><span id="pause-label">暂停</span>
+            </button>
+            <button class="icon-btn" id="sound" type="button" aria-pressed="true" title="切换音效">
+              <span aria-hidden="true">🔊</span><span id="sound-label">音效开</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="stage">
+          <canvas id="game" width="480" height="360" role="img" tabindex="0"
+            aria-label="贪吃蛇游戏画面：20 列 15 行的网格，绿色蛇身，红色食物">
+            你的浏览器不支持 Canvas，请使用最新版 Chrome、Edge、Firefox 或 Safari。
+          </canvas>
+          <div class="overlay" id="overlay">
+            <p class="overlay-kicker" id="overlay-kicker">准备好了吗？</p>
+            <h2 id="overlay-title">开始你的贪吃蛇</h2>
+            <p id="overlay-text">方向键 / WASD 转向，吃掉红点得分。</p>
+            <button class="btn btn-primary" id="start" type="button">开始游戏</button>
+          </div>
+          <p class="sr-only" id="live" role="status" aria-live="polite"></p>
+        </div>
+
+        <div class="controls-bar">
+          <p class="hint">
+            <kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> 或 <kbd>WASD</kbd> 转向 · <kbd>Space</kbd> 暂停
+          </p>
+          <div class="dpad" aria-label="触屏方向键">
+            <button type="button" data-dir="up" aria-label="向上">▲</button>
+            <button type="button" data-dir="left" aria-label="向左">◀</button>
+            <button type="button" data-dir="down" aria-label="向下">▼</button>
+            <button type="button" data-dir="right" aria-label="向右">▶</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap section-grid">
+        <div>
+          <p class="eyebrow">直接回答</p>
+          <h2 id="about-title">贪吃蛇经典版是什么？</h2>
+          <p class="answer-box"><strong>贪吃蛇经典版（Snake Classic）</strong>是一个免费、开源、可直接在浏览器中游玩的轻量级 Snake 游戏。它在 20×15 的网格上进行，蛇每 150 毫秒移动一格，吃到食物加 10 分，撞到自己游戏结束，越过边缘会从对侧出现。页面为纯静态 HTML/CSS/JavaScript，无广告、无追踪、无需登录。</p>
+          <p>本作把 <a href="https://berbasoft.com/simplegametutorials/love/snake" target="_blank" rel="noopener noreferrer">Simple Game Tutorials 的 Snake 教程</a>规则完整搬到 Web：用方向队列避免快速按键导致的自撞，食物只生成在空白格，最高分保存在浏览器本地。整个过程不请求任何第三方接口，首次加载后可离线游玩。</p>
+          <p class="en-line" lang="en"><strong>In English:</strong> Snake Classic is a free, open-source, zero-dependency Snake game playable in any modern browser. It uses a 20×15 grid, a 150 ms tick, wrap-around edges, and a locally stored high score.</p>
+        </div>
+        <aside class="fact-card" aria-label="关键信息">
+          <h3>关键信息</h3>
+          <dl>
+            <div><dt>类型</dt><dd>街机 / 休闲</dd></div>
+            <div><dt>平台</dt><dd>现代浏览器（桌面 + 移动）</dd></div>
+            <div><dt>价格</dt><dd>永久免费</dd></div>
+            <div><dt>语言</dt><dd>简体中文 / English</dd></div>
+            <div><dt>技术</dt><dd>原生 JS + Canvas 2D</dd></div>
+            <div><dt>许可证</dt><dd>MIT（代码）</dd></div>
+            <div><dt>更新日期</dt><dd><time datetime="2026-10-26">2026-10-26</time></dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="wrap">
+        <p class="eyebrow">为什么是它</p>
+        <h2 id="features-title">轻量，但不简陋</h2>
+        <p class="section-lede">从加载速度到触屏操作，每个细节都为“打开即玩”服务。</p>
+        <div class="cards">
+          <article class="card">
+            <span class="card-icon" aria-hidden="true">⚡</span>
+            <h3>纯静态零依赖</h3>
+            <p>单个 HTML、一份 CSS、一份 JS，不使用框架、字体 CDN 或分析脚本。首屏约 66 KB（gzip 后约 18 KB），弱网也能快速开始。</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true">🎮</span>
+            <h3>全设备可玩</h3>
+            <p>桌面端用方向键或 WASD，移动端滑动画面或点击方向键。布局自适应，横竖屏都不会遮挡游戏区域。</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true">📴</span>
+            <h3>离线可安装</h3>
+            <p>内置 Service Worker 与 Web App Manifest。首次访问后可离线打开，也可以添加到手机主屏幕，像原生应用一样启动。</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true">🏆</span>
+            <h3>本地最高分</h3>
+            <p>成绩只写入浏览器的 localStorage，不上传、不追踪。刷新页面记录仍在，清除站点数据后重置。</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true">🧩</span>
+            <h3>开源可复用</h3>
+            <p>代码以 MIT 协议开放，适合作为 Canvas 游戏、方向队列、碰撞检测和 PWA 的入门示例，可直接用于教学或二次开发。</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true">♿</span>
+            <h3>基础可访问性</h3>
+            <p>语义化结构、清晰焦点样式、屏幕阅读器状态提示，并尊重“减少动态效果”系统设置。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="howto" aria-labelledby="howto-title">
+      <div class="wrap section-grid section-grid--wide">
+        <div>
+          <p class="eyebrow">上手 30 秒</p>
+          <h2 id="howto-title">怎么玩贪吃蛇经典版</h2>
+          <ol class="steps">
+            <li><strong>开始：</strong>点击“开始游戏”，或直接按任意方向键。</li>
+            <li><strong>转向：</strong>用方向键 / WASD 控制蛇头，不能直接掉头。</li>
+            <li><strong>吃食物：</strong>让蛇头碰到红色方块，每次加 10 分并增长一格。</li>
+            <li><strong>活下去：</strong>撞到自己的身体即结束；越过边界会从对侧穿出。</li>
+          </ol>
+          <div class="table-wrap">
+            <table>
+              <caption class="sr-only">贪吃蛇经典版操作方式</caption>
+              <thead>
+                <tr><th scope="col">操作</th><th scope="col">键盘</th><th scope="col">触屏</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">转向</th><td><kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> 或 <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></td><td>滑动游戏画面，或点击方向键</td></tr>
+                <tr><th scope="row">暂停 / 继续</th><td><kbd>Space</kbd> 或 <kbd>P</kbd></td><td>点击右上角暂停按钮</td></tr>
+                <tr><th scope="row">重新开始</th><td><kbd>Enter</kbd>（结束后）</td><td>点击“再玩一次”</td></tr>
+                <tr><th scope="row">音效</th><td>点击右上角音效按钮</td><td>点击右上角音效按钮</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <aside class="rules-card" aria-labelledby="rules-title">
+          <h3 id="rules-title">核心规则</h3>
+          <ul>
+            <li>网格固定为 <strong>20 × 15</strong>，每格 24 像素。</li>
+            <li>蛇每 <strong>150 毫秒</strong>移动一格，速度恒定。</li>
+            <li>吃到食物 <strong>+10 分</strong>，蛇身增长一格。</li>
+            <li>食物只会出现在未被蛇占据的格子。</li>
+            <li>蛇头撞到自身判定失败。</li>
+            <li>移动方向进入队列，快速连按不会误触发掉头。</li>
+          </ul>
+          <p class="rules-note">规则与数据结构参考 Simple Game Tutorials 的公有领域 Snake 教程，使用原生 JavaScript 独立实现。</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <p class="eyebrow">常见问题</p>
+        <h2 id="faq-title">关于贪吃蛇经典版</h2>
+        <div class="faq-list">
+          <details>
+            <summary><h3>贪吃蛇经典版是免费的吗？</h3></summary>
+            <p class="faq-answer">是。游戏完全免费，没有广告、内购或付费墙，也不需要注册账号。代码以 MIT 协议开源。</p>
+          </details>
+          <details>
+            <summary><h3>可以在手机上玩吗？</h3></summary>
+            <p class="faq-answer">可以。页面采用响应式布局，手机和平板可直接游玩；支持在游戏画面上滑动转向，也可以点击屏幕下方的方向键。</p>
+          </details>
+          <details>
+            <summary><h3>需要下载或安装吗？</h3></summary>
+            <p class="faq-answer">不需要下载。游戏是纯静态网页，打开即玩；在支持的浏览器中还可以“添加到主屏幕”，首次加载后可离线游玩。</p>
+          </details>
+          <details>
+            <summary><h3>最高分会保存在哪里？</h3></summary>
+            <p class="faq-answer">最高分保存在浏览器本地存储（localStorage）中，不会上传到服务器。清除浏览器数据或更换设备后记录会丢失。</p>
+          </details>
+          <details>
+            <summary><h3>游戏用了什么技术？</h3></summary>
+            <p class="faq-answer">使用原生 HTML、CSS、JavaScript 和 Canvas 2D 绘制，没有任何第三方框架或运行时依赖。首屏 HTML/CSS/JS 约 66 KB，gzip 后约 18 KB。</p>
+          </details>
+          <details>
+            <summary><h3>可以二次开发或商用吗？</h3></summary>
+            <p class="faq-answer">可以。代码采用 MIT 许可证，允许修改、分发和商业使用，只需保留版权与许可声明；页面文字内容采用 CC BY 4.0，转载时请注明来源。</p>
+          </details>
+          <details>
+            <summary><h3>为什么选择 Simple Game Tutorials 的 Snake？</h3></summary>
+            <p class="faq-answer">在 itch.io 开源标签、GitHub Trending、Ludum Dare 作品和 Simple Game Tutorials 四个来源中，该教程的 Snake 规则完整、代码属于公有领域、体积极小且适合浏览器重写，最符合“轻量级静态游戏”的筛选标准。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sources" aria-labelledby="sources-title">
+      <div class="wrap">
+        <p class="eyebrow">选品与来源</p>
+        <h2 id="sources-title">这个游戏是怎么选出来的</h2>
+        <p class="section-lede">筛选日期：<time datetime="2026-10-26">2026-10-26</time>。目标是一个能在浏览器直接运行、体积小、授权清晰、移动端可玩的静态游戏。</p>
+        <div class="table-wrap">
+          <table>
+            <caption class="sr-only">候选来源与筛选结果</caption>
+            <thead>
+              <tr><th scope="col">来源</th><th scope="col">检查内容</th><th scope="col">结果</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><a href="https://simplegametutorials.github.io/" target="_blank" rel="noopener noreferrer">Simple Game Tutorials</a></th>
+                <td>Snake 教程（LÖVE 11 / Pygame Zero 1.2），包含完整规则、分步源码与可下载示例。</td>
+                <td><span class="tag tag-yes">已采用</span> 规则与实现思路参考；教程为公有领域。</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="https://github.com/trending" target="_blank" rel="noopener noreferrer">GitHub Trending（每日）</a></th>
+                <td>2026-10-26 当日趋势榜，检查是否存在可直接部署的轻量游戏项目。</td>
+                <td><span class="tag tag-no">未采用</span> 当日榜单以 AI 工具与框架为主，没有符合体积和玩法要求的游戏。</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="https://itch.io/games/tag-open-source" target="_blank" rel="noopener noreferrer">itch.io · tag: open-source</a></th>
+                <td>3,000+ 个开源标签作品，优先检查可浏览器运行、体积小的项目。</td>
+                <td><span class="tag tag-no">未采用</span> 热门作品多为大型游戏或桌面项目，需逐个核验授权，不符合“轻量静态”目标。</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="https://github.com/orgs/LudumDare/repositories" target="_blank" rel="noopener noreferrer">Ludum Dare 官方仓库</a></th>
+                <td>Ludum Dare 组织的 7 个公开仓库与 jam 作品生态。</td>
+                <td><span class="tag tag-no">未采用</span> 官方仓库主要是赛事网站源码；jam 作品质量参差且授权需逐个确认。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="criteria">
+          <h3>筛选标准</h3>
+          <ul>
+            <li><strong>可直接运行：</strong>浏览器打开即玩，无需安装插件或后端服务。</li>
+            <li><strong>体积可控：</strong>核心资源小于 500 KB，首屏快速完成。</li>
+            <li><strong>授权清晰：</strong>允许修改与再分发，最好属于公有领域或 MIT 等宽松协议。</li>
+            <li><strong>规则完整：</strong>有明确的胜负条件、操作方式与可验证的实现细节。</li>
+            <li><strong>移动端友好：</strong>能适配触屏和不同屏幕尺寸。</li>
+          </ul>
+        </div>
+
+        <div class="credit">
+          <h3>署名与许可</h3>
+          <p>游戏规则、数据结构与方向队列思路参考 <strong>Simple Game Tutorials — Snake</strong>（作者 BerbaSoft，教程声明为公有领域）。本页面使用原生 JavaScript 独立重写，未包含教程的 Lua 或 Python 源文件。</p>
+          <ul>
+            <li>本站代码：MIT License，可自由修改、分发与商用。</li>
+            <li>本站文字与插图：CC BY 4.0，转载请保留来源链接。</li>
+            <li>第三方名称与链接归各自权利人所有，仅用于来源说明。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <a class="brand" href="./" aria-label="返回首页">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+            <rect x="2" y="2" width="28" height="28" rx="7" fill="#101a33"/>
+            <rect x="7" y="18" width="6" height="6" rx="1.6" fill="#7cff6b"/>
+            <rect x="13" y="18" width="6" height="6" rx="1.6" fill="#7cff6b"/>
+            <rect x="13" y="12" width="6" height="6" rx="1.6" fill="#a8ff9c"/>
+            <rect x="19" y="12" width="6" height="6" rx="1.6" fill="#7cff6b"/>
+            <circle cx="23" cy="7" r="2.4" fill="#ff5a7a"/>
+          </svg>
+          <span class="brand-text">SNAKE<em>CLASSIC</em></span>
+        </a>
+        <p class="footer-note">免费、开源、零依赖的浏览器贪吃蛇。</p>
+      </div>
+      <nav aria-label="页脚导航">
+        <a href="#play">开始游戏</a>
+        <a href="#howto">玩法</a>
+        <a href="#faq">常见问题</a>
+        <a href="#sources">来源与许可</a>
+      </nav>
+      <div class="footer-meta">
+        <p>代码 MIT · 内容 CC BY 4.0</p>
+        <p>最后更新：<time datetime="2026-10-26">2026-10-26</time></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/game.js?v=20261026-3" defer></script>
+</body>
+</html>
