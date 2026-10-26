@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="贪吃蛇经典版图标">
+  <rect width="64" height="64" rx="14" fill="#0f1830"/>
+  <rect x="14" y="36" width="12" height="12" rx="3" fill="#7cff6b"/>
+  <rect x="26" y="36" width="12" height="12" rx="3" fill="#7cff6b"/>
+  <rect x="26" y="24" width="12" height="12" rx="3" fill="#a8ff9c"/>
+  <rect x="38" y="24" width="12" height="12" rx="3" fill="#7cff6b"/>
+  <circle cx="46" cy="15" r="4.5" fill="#ff5a7a"/>
+</svg>
