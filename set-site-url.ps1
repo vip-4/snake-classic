@@ -18,7 +18,8 @@ if (-not $SiteUrl.EndsWith("/")) { $SiteUrl += "/" }
 $root = $PSScriptRoot
 $oldUrls = @(
   "http://localhost:8080/",
-  "https://vip-4.github.io/snake-classic/"
+  "https://vip-4.github.io/snake-classic/",
+  "https://snake-classic.my-fullstack-app.workers.dev/"
 )
 $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
 $changed = 0
