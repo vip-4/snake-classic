@@ -2,11 +2,12 @@
 
 一个可直接部署的轻量级静态游戏站：原生 HTML / CSS / JavaScript + Canvas 2D，内置 SEO 与 GEO（Generative Engine Optimization，生成式引擎优化）。
 
-- 生产地址：<https://vip-4.github.io/snake-classic/>
+- 生产地址：<https://snake-classic.my-fullstack-app.workers.dev/>
+- 镜像地址：<https://vip-4.github.io/snake-classic/>
 - 源码仓库：<https://github.com/vip-4/snake-classic>
 - 游戏：经典贪吃蛇（20×15 网格、150ms 步进、穿墙、方向队列、本地最高分）
-- 体积：首屏 HTML/CSS/JS 约 66 KB（gzip 后约 18 KB），无第三方请求
-- 部署：纯静态，可放到任意静态托管
+- 体积：首屏 HTML/CSS/JS 约 67 KB（Brotli 后约 18 KB），无第三方请求
+- 部署：Cloudflare Workers 静态资源（主站）+ GitHub Pages（镜像），纯静态
 - 特色：PWA 离线可玩、响应式、触屏方向键、基础无障碍
 - 来源：规则参考 [Simple Game Tutorials — Snake](https://berbasoft.com/simplegametutorials/love/snake)（公有领域），使用原生 JavaScript 独立实现
 
@@ -29,11 +30,11 @@
 ├─ robots.txt                # 显式允许 GPTBot / ClaudeBot / PerplexityBot 等
 ├─ sitemap.xml
 ├─ llms.txt                  # 给生成式引擎的结构化摘要
-├─ _headers                  # Netlify / Cloudflare Pages 响应头
+├─ _headers                  # Cloudflare Workers / Pages 安全与缓存响应头
 ├─ .nojekyll                 # GitHub Pages 不做 Jekyll 处理
 ├─ LICENSE                   # MIT（代码）
 ├─ serve.ps1                 # 本地静态服务器（Windows，无需 Node/Python）
-├─ set-site-url.ps1          # 上线前把 localhost 替换成正式域名
+├─ set-site-url.ps1          # 上线前把 localhost / 旧域名替换成正式域名
 └─ scripts/
    └─ generate-assets.ps1    # 重新生成 PNG 图标和 OG 图
 ```
@@ -58,14 +59,34 @@ powershell -ExecutionPolicy Bypass -File .\serve.ps1 -Port 8080
 - JSON-LD：`@graph` 可解析，包含 WebSite、Organization、WebPage、VideoGame、HowTo、FAQPage。
 - PWA：Manifest 与 Service Worker 可注册；核心资源首次访问后离线可用。
 
+## Cloudflare 生产验证结果（2026-10-26）
+
+- Lighthouse：Accessibility 100 / Best Practices 100 / SEO 100。
+- 主要资源全部 200；HTML/CSS/JS 经 Brotli 压缩，首屏传输约 18 KB。
+- canonical、Open Graph、Twitter Card、JSON-LD 全部使用 Workers 生产域名。
+- JSON-LD `@graph` 解析通过，FAQ 与页面可见内容一致。
+- 390×844 视口无横向溢出，移动端方向键与滑动可用。
+- 游戏线上复测：开始、吃食物 +10、蛇身增长、暂停 / 继续、16 步穿墙均通过。
+- PWA：Service Worker 激活，缓存 `snake-classic-v8`，离线核心资源齐全。
+- 未知路径返回 HTTP 404 + 自定义 404 页；`_headers` 安全响应头生效。
+- `robots.txt`、`sitemap.xml`、`llms.txt` 均可访问且只包含生产域名。
+
 ## 当前生产部署
 
-- 平台：GitHub Pages
-- 地址：<https://vip-4.github.io/snake-classic/>
-- 仓库：<https://github.com/vip-4/snake-classic>
-- 分支 / 目录：`main` / 根目录
-- 每次推送到 `main` 会自动触发 Pages 重新构建
-- `robots.txt`、`sitemap.xml`、`llms.txt` 已使用生产域名
+| 项目 | 值 |
+| --- | --- |
+| 主站平台 | Cloudflare Workers Static Assets（Free） |
+| 生产地址 | <https://snake-classic.my-fullstack-app.workers.dev/> |
+| Worker 名称 | `snake-classic` |
+| 部署方式 | Workers 静态资源直传 API（无需 CI） |
+| 静态文件 | 14 个，约 199 KB |
+| 镜像 | <https://vip-4.github.io/snake-classic/> |
+| 镜像仓库 | <https://github.com/vip-4/snake-classic>，`main` / 根目录 |
+
+- GitHub Pages 每次推送到 `main` 会自动重建，作为备用镜像。
+- 主站与镜像的 `canonical`、Open Graph、`sitemap.xml`、`robots.txt`、`llms.txt` 均指向 Cloudflare 生产地址。
+- Cloudflare 侧通过 `_headers` 应用 HSTS、`nosniff`、`Referrer-Policy`、`X-Frame-Options`、`Permissions-Policy`，并为静态资源设置缓存策略。
+- 未知路径返回 HTTP 404 与自定义 `404.html`；`/404` 额外返回 `X-Robots-Tag: noindex`。
 
 ## 部署到公网
 
@@ -87,6 +108,8 @@ powershell -ExecutionPolicy Bypass -File .\set-site-url.ps1 -SiteUrl "https://�
 1. 新建 Pages 项目，选择 “Direct Upload”。
 2. 上传本目录。
 3. 在 “Custom domains” 绑定域名，执行上面的 `set-site-url.ps1`。
+
+> 当前主站使用 Cloudflare Workers 静态资源（同样支持 `_headers`）。当 Pages 项目数达到账户上限时，可改用 Workers 静态资源直传，功能等价。
 
 ### 方式 C：GitHub Pages
 
@@ -110,7 +133,7 @@ Nginx、Apache、对象存储（OSS / COS / S3）、Vercel 均可。只需保证
 
 ## 上线前检查清单
 
-- [ ] 运行 `set-site-url.ps1` 替换 canonical、OG、sitemap、robots、llms.txt 中的 `http://localhost:8080/`
+- [ ] 运行 `set-site-url.ps1` 替换 canonical、OG、sitemap、robots、llms.txt 中的 `http://localhost:8080/` 或旧域名
 - [ ] 确认正式域名可访问，HTTPS 正常
 - [ ] 在 [Google Rich Results Test](https://search.google.com/test/rich-results) 验证 VideoGame / FAQPage / HowTo 结构化数据
 - [ ] 在 [Schema Markup Validator](https://validator.schema.org/) 检查 JSON-LD
@@ -168,8 +191,9 @@ Nginx、Apache、对象存储（OSS / COS / S3）、Vercel 均可。只需保证
 
 ## 安全说明
 
-- 站点与仓库不包含任何 API Key、访问令牌或第三方分析脚本。
-- 如曾通过聊天、截图或日志公开过 GitHub / 云服务令牌，请在服务商后台立即撤销并重新签发；本仓库未保存部署令牌。
+- 站点与仓库不包含任何 API Key、访问令牌、R2 密钥或第三方分析脚本。
+- 如曾通过聊天、截图或日志公开过 GitHub / Cloudflare / R2 令牌，请在服务商后台立即撤销并重新签发；本仓库未保存部署令牌。
+- 部署仅通过临时环境变量传递令牌，未写入源文件、构建产物或部署包。
 - 如需接入后端，请使用服务端环境变量，不要把密钥写进静态文件。
 
 ## 许可与署名

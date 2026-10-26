@@ -1,4 +1,4 @@
-﻿# 将站点内的本地地址替换为正式域名。
+﻿# 将站点内的本地地址或旧域名替换为正式域名。
 # 用法：powershell -ExecutionPolicy Bypass -File .\set-site-url.ps1 -SiteUrl "https://snake.example.com/"
 # 提示：SiteUrl 末尾的斜杠会自动补齐；替换后请重新生成 sitemap 并提交 Search Console。
 
@@ -16,7 +16,10 @@ if ($SiteUrl -notmatch "^https?://") {
 if (-not $SiteUrl.EndsWith("/")) { $SiteUrl += "/" }
 
 $root = $PSScriptRoot
-$old = "http://localhost:8080/"
+$oldUrls = @(
+  "http://localhost:8080/",
+  "https://vip-4.github.io/snake-classic/"
+)
 $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
 $changed = 0
 
@@ -32,12 +35,18 @@ foreach ($name in $files) {
   if (-not (Test-Path -LiteralPath $path -PathType Leaf)) { continue }
 
   $text = [System.IO.File]::ReadAllText($path, [System.Text.Encoding]::UTF8)
-  if (-not $text.Contains($old)) {
+  $matched = $false
+  foreach ($old in $oldUrls) {
+    if ($text.Contains($old)) {
+      $text = $text.Replace($old, $SiteUrl)
+      $matched = $true
+    }
+  }
+  if (-not $matched) {
     Write-Host ("skip  " + $name + " (no local URL found)")
     continue
   }
 
-  $text = $text.Replace($old, $SiteUrl)
   [System.IO.File]::WriteAllText($path, $text, $utf8NoBom)
   Write-Host ("write " + $name)
   $changed++

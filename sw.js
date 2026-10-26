@@ -1,9 +1,9 @@
-const CACHE = "snake-classic-v6";
+const CACHE = "snake-classic-v8";
 const ASSETS = [
   "./",
   "./index.html",
-  "./assets/style.css?v=20261026-3",
-  "./assets/game.js?v=20261026-3",
+  "./assets/style.css?v=20261026-4",
+  "./assets/game.js?v=20261026-4",
   "./assets/favicon.svg",
   "./assets/icon-192.png",
   "./assets/icon-512.png",

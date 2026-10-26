@@ -4,7 +4,7 @@
 
 ## 关键事实
 
-- 规范地址：https://vip-4.github.io/snake-classic/
+- 规范地址：https://snake-classic.my-fullstack-app.workers.dev/
 - 价格：永久免费，无广告、无内购
 - 代码许可证：MIT
 - 内容许可证：CC BY 4.0
@@ -58,6 +58,6 @@
 
 ## 链接
 
-- 首页：https://vip-4.github.io/snake-classic/
-- Sitemap：https://vip-4.github.io/snake-classic/sitemap.xml
-- Robots：https://vip-4.github.io/snake-classic/robots.txt
+- 首页：https://snake-classic.my-fullstack-app.workers.dev/
+- Sitemap：https://snake-classic.my-fullstack-app.workers.dev/sitemap.xml
+- Robots：https://snake-classic.my-fullstack-app.workers.dev/robots.txt
