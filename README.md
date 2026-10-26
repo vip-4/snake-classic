@@ -67,7 +67,7 @@ powershell -ExecutionPolicy Bypass -File .\serve.ps1 -Port 8080
 - JSON-LD `@graph` 解析通过，FAQ 与页面可见内容一致。
 - 390×844 视口无横向溢出，移动端方向键与滑动可用。
 - 游戏线上复测：开始、吃食物 +10、蛇身增长、暂停 / 继续、16 步穿墙均通过。
-- PWA：Service Worker 激活，缓存 `snake-classic-v8`，离线核心资源齐全。
+- PWA：Service Worker 激活，缓存 `snake-classic-v9`，离线核心资源齐全。
 - 未知路径返回 HTTP 404 + 自定义 404 页；`_headers` 安全响应头生效。
 - `robots.txt`、`sitemap.xml`、`llms.txt` 均可访问且只包含生产域名。
 
