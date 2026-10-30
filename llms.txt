@@ -1,246 +1,122 @@
-# 贪吃蛇经典版 · Snake Classic Arcade & Casino Demos
+# 璐悆铔囩粡鍏哥増 路 Snake Classic Arcade & Casino Demos
 
-> 一个免费、开源、零依赖的浏览器游戏合集：22 款经典街机与益智游戏（贪吃蛇、2048、扫雷、Wordle、俄罗斯方块、数独、推箱子、太空射击、塔防等），外加 3 款只使用虚拟筹码的娱乐场演示（21 点、欧洲轮盘、视频扑克）。全部为纯静态 HTML/CSS/JavaScript，支持手机、键盘与离线游玩，无需下载、登录或安装。
+> 涓€涓厤璐广€佸紑婧愩€侀浂渚濊禆鐨勬祻瑙堝櫒娓告垙鍚堥泦锛?2 娆剧粡鍏歌鏈轰笌鐩婃櫤娓告垙锛堣椽鍚冭泧銆?048銆佹壂闆枫€乄ordle銆佷縿缃楁柉鏂瑰潡銆佹暟鐙€佹帹绠卞瓙銆佸お绌哄皠鍑汇€佸闃茬瓑锛夛紝澶栧姞 3 娆惧彧浣跨敤铏氭嫙绛圭爜鐨勫ū涔愬満婕旂ず锛?1 鐐广€佹娲茶疆鐩樸€佽棰戞墤鍏嬶級銆傚叏閮ㄤ负绾潤鎬?HTML/CSS/JavaScript锛屾敮鎸佹墜鏈恒€侀敭鐩樹笌绂荤嚎娓哥帺锛屾棤闇€涓嬭浇銆佺櫥褰曟垨瀹夎銆?
+## 鍏抽敭浜嬪疄
 
-## 关键事实
+- 瑙勮寖鍦板潃锛歨ttps://snake-classic-casino.netlify.app/
+- 琛楁満鍚堥泦锛歨ttps://snake-classic-casino.netlify.app/arcade/
+- 濞变箰鍦烘紨绀哄悎闆嗭細https://vip-4.github.io/snake-classic/casino/
+- 娓告垙鎬绘暟锛?5锛?2 娆捐鏈?/ 鐩婃櫤 + 3 娆惧ū涔愬満婕旂ず锛?- 浠锋牸锛氭案涔呭厤璐癸紝鏃犲箍鍛娿€佹棤鍐呰喘銆佹棤娉ㄥ唽
+- 浠ｇ爜璁稿彲璇侊細MIT
+- 鍐呭璁稿彲璇侊細CC BY 4.0
+- 鎶€鏈爤锛氬師鐢?HTML銆丆SS銆丣avaScript銆丆anvas 2D锛涙棤绗笁鏂规鏋躲€佸瓧浣?CDN銆佺粺璁¤剼鏈垨杩滅▼ API
+- 骞冲彴锛氱幇浠ｆ闈笌绉诲姩娴忚鍣?- 绂荤嚎锛氭敮鎸侊紙Service Worker + Web App Manifest锛?- 璇█锛氱畝浣撲腑鏂囷紝闄勮嫳鏂囨憳瑕?- 鏈€鍚庢洿鏂帮細2026-10-30
+- 濞变箰鍦哄悎瑙勶細21 鐐广€佽疆鐩樸€佽棰戞墤鍏嬪潎涓哄厤璐规紨绀猴紝鍙娇鐢ㄦ病鏈夎揣甯佷环鍊肩殑铏氭嫙绛圭爜锛涙棤鐪熼挶涓嬫敞銆佸厖鍊笺€佹彁鐜般€佽浆璐︽垨濂栧搧鍏戞崲鍔熻兘
 
-- 规范地址：https://snake-classic-casino.netlify.app/
-- 街机合集：https://snake-classic-casino.netlify.app/arcade/
-- 娱乐场演示合集：https://snake-classic-casino.netlify.app/casino/
-- 游戏总数：25（22 款街机 / 益智 + 3 款娱乐场演示）
-- 价格：永久免费，无广告、无内购、无注册
-- 代码许可证：MIT
-- 内容许可证：CC BY 4.0
-- 技术栈：原生 HTML、CSS、JavaScript、Canvas 2D；无第三方框架、字体 CDN、统计脚本或远程 API
-- 平台：现代桌面与移动浏览器
-- 离线：支持（Service Worker + Web App Manifest）
-- 语言：简体中文，附英文摘要
-- 最后更新：2026-10-30
-- 娱乐场合规：21 点、轮盘、视频扑克均为免费演示，只使用没有货币价值的虚拟筹码；无真钱下注、充值、提现、转账或奖品兑换功能
+## 娓告垙鍒楄〃锛堣鏈?/ 鐩婃櫤锛?2 娆撅級
 
-## 游戏列表（街机 / 益智，22 款）
+### 1. 璐悆铔囩粡鍏哥増锛圫nake Classic锛?- 鍦板潃锛歨ttps://snake-classic-casino.netlify.app/
+- 绫诲瀷锛氫紤闂?/ 琛楁満
+- 鐜╂硶锛?0 鍒?脳 15 琛岀綉鏍硷紝姣?150 姣绉诲姩涓€鏍硷紝绌垮瑙勫垯锛屽悆鍒伴鐗╁姞 10 鍒嗗苟澧為暱涓€鏍硷紝鎾炲埌鑷韩缁撴潫銆?- 鎿嶄綔锛氭柟鍚戦敭鎴?WASD锛涜Е灞忔粦鍔ㄦ垨灞忓箷鏂瑰悜閿紱绌烘牸 / P 鏆傚仠锛汦nter 鍦ㄧ粨鏉熷悗閲嶅紑銆?- 鎴愮哗锛氭渶楂樺垎淇濆瓨鍦ㄦ祻瑙堝櫒 localStorage銆?
+### 2. 2048 缁忓吀鐗堬紙Merge 2048锛?- 鍦板潃锛歨ttps://snake-classic-casino.netlify.app/games/merge-2048/
+- 绫诲瀷锛氱泭鏅?/ 鏁板瓧
+- 鐜╂硶锛?脳4 妫嬬洏锛屾粦鍔ㄥ悎骞剁浉鍚屾暟瀛楋紝鍚堟垚 2048 鍗宠揪鎴愮洰鏍囷紝涔嬪悗鍙户缁寫鎴橀珮鍒嗐€?- 鎿嶄綔锛氭柟鍚戦敭銆乄ASD銆佸睆骞曟柟鍚戞寜閽垨瑙﹀睆婊戝姩銆?- 鐗硅壊锛氭敮鎸佷竴姝ユ挙閿€銆佹渶楂樺垎璁板綍銆佺绾挎父鐜┿€?
+### 3. 鎵浄缁忓吀鐗堬紙Minesweeper Classic锛?- 鍦板潃锛歨ttps://snake-classic-casino.netlify.app/games/minesweeper/
+- 绫诲瀷锛氱泭鏅?/ 閫昏緫鎺ㄧ悊
+- 闅惧害锛氬垵绾?9脳9銆佷腑绾?16脳16銆侀珮绾?16脳24銆?- 鐜╂硶锛氶娆＄偣鍑讳繚璇佸畨鍏紱鏁板瓧琛ㄧず鐩搁偦鍏牸涓殑鍦伴浄鏁帮紱缈诲紑鎵€鏈夊畨鍏ㄦ牸鑾疯儨銆?- 鎿嶄綔锛氬乏閿炕寮€銆佸彸閿彃鏃楋紱鎵嬫満鍙娇鐢ㄦ棗鏍囨ā寮忥紱閿洏鏂瑰悜閿Щ鍔ㄧ劍鐐广€?- 鎴愮哗锛氭瘡妗ｉ毦搴︾殑鏈€浣崇敤鏃朵繚瀛樺湪 localStorage銆?
+### 4. Wordle 涓枃鐚滆瘝锛圵ordle锛?- 鍦板潃锛歨ttps://snake-classic-casino.netlify.app/games/wordle/
+- 绫诲瀷锛氱泭鏅?/ 鐚滆瘝
+- 鐜╂硶锛氭瘡澶╀竴涓簲瀛楁瘝鍗曡瘝锛屾渶澶?6 娆℃満浼氾紱缁胯壊琛ㄧず浣嶇疆姝ｇ‘锛岄粍鑹茶〃绀哄瓧姣嶅瓨鍦ㄤ絾浣嶇疆閿欒锛岀伆鑹茶〃绀哄瓧姣嶄笉瀛樺湪銆?- 鎿嶄綔锛氬睆骞曞瓧姣嶉敭鐩樻垨瀹炰綋閿洏杈撳叆銆?- 鐗硅壊锛氭湰鍦扮粺璁′笌鎴愮哗鍒嗕韩锛屼笉渚濊禆鏈嶅姟鍣ㄣ€?
+### 5. 淇勭綏鏂柟鍧楋紙Tetris锛?- 鍦板潃锛歨ttps://snake-classic-casino.netlify.app/games/tetris/
+- 绫诲瀷锛氳鏈?/ 鐩婃櫤
+- 鐜╂硶锛?0脳20 妫嬬洏锛? 绉嶆柟鍧楋紙I銆丱銆乀銆丼銆乑銆丣銆丩锛夛紝娑堣寰楀垎骞舵彁鍗囩瓑绾с€?- 鎿嶄綔锛氭棆杞€佸乏鍙崇Щ鍔ㄣ€佽蒋闄嶃€佺‖闄嶃€乭old 鏆傚瓨锛涙敮鎸侀敭鐩樹笌瑙﹀睆銆?- 鐗硅壊锛氬菇鐏垫柟鍧楄惤鐐规彁绀猴紝璁板綍鏈€楂樺垎涓庣瓑绾с€?
+### 6. 鏁扮嫭锛圫udoku锛?- 鍦板潃锛歨ttps://snake-classic-casino.netlify.app/games/sudoku/
+- 绫诲瀷锛氱泭鏅?/ 閫昏緫
+- 鐜╂硶锛?脳9 鏍囧噯鏁扮嫭锛屾瘡琛屻€佹瘡鍒椾笌姣忎釜 3脳3 瀹～鍏?1鈥? 涓斾笉閲嶅锛涜嚜鍔ㄧ敓鎴愯皽棰樸€?- 闅惧害锛氫笁妗ｃ€?- 鐗硅壊锛氱瑪璁版ā寮忋€佽鏃朵笌缁熻锛屾敮鎸侀敭鐩樺拰瑙﹀睆銆?
+### 7. 鎺ㄧ瀛愶紙Sokoban锛?- 鍦板潃锛歨ttps://snake-classic-casino.netlify.app/games/sokoban/
+- 绫诲瀷锛氱泭鏅?/ 瑙ｈ皽
+- 鐜╂硶锛氭妸绠卞瓙鎺ㄥ埌鐩爣鐐癸紝瑙勫垝璺嚎閬垮厤鎶婄瀛愭帹鍏ユ瑙掞紱鍖呭惈澶氫釜鍏冲崱銆?- 鎿嶄綔锛氭柟鍚戦敭 / WASD 鎴栧睆骞曟柟鍚戞寜閽€?- 鐗硅壊锛氭挙閿€銆侀噸鍋氥€佸叧鍗￠€夋嫨涓庢渶灏戞鏁拌褰曘€?
+### 8. 浜斿瓙妫嬶紙Gomoku锛?- 鍦板潃锛歨ttps://snake-classic-casino.netlify.app/games/gomoku/
+- 绫诲瀷锛氭绫?/ 绛栫暐
+- 鐜╂硶锛?5脳15 妫嬬洏锛屽弻鏂硅疆娴佽惤瀛愶紝鍏堣繛鎴愪簲瀛愯幏鑳溿€?- 妯″紡锛氫笁妗?AI 浜烘満瀵规垬涓庡弻浜哄悓灞忋€?- 鐗硅壊锛氱鎵嬭鍒欍€佹倲妫嬩笌璁℃椂锛屾敮鎸侀敭鐩樺拰瑙﹀睆銆?
+### 9. 鍥涘瓙杩炵彔锛圕onnect Four锛?- 鍦板潃锛歨ttps://snake-classic-casino.netlify.app/games/connect-four/
+- 绫诲瀷锛氭绫?/ 绛栫暐
+- 鐜╂硶锛?脳6 妫嬬洏锛屾瀛愬彈閲嶅姏涓嬭惤锛屽厛杩炴垚鍥涢鍚岃壊妫嬪瓙锛堟í銆佺珫鎴栨枩绾匡級鑾疯儨銆?- 妯″紡锛氫汉鏈哄鎴樹笌鍙屼汉鍚屽睆銆?
+### 10. 浜曞瓧妫嬶紙Tic Tac Toe锛?- 鍦板潃锛歨ttps://snake-classic-casino.netlify.app/games/tic-tac-toe/
+- 绫诲瀷锛氭绫?/ 浼戦棽
+- 鐜╂硶锛?脳3 妫嬬洏锛屽弻鏂硅疆娴佽惤瀛愶紝鍏堣繛鎴愪笁瀛愯幏鑳溿€?- 妯″紡锛氬弻浜哄悓灞忥紝闄勮鍒嗙粺璁°€?
+### 11. 鎵撶爾鍧楋紙Breakout锛?- 鍦板潃锛歨ttps://snake-classic-casino.netlify.app/games/breakout/
+- 绫诲瀷锛氳鏈?/ 鍔ㄤ綔
+- 鐜╂硶锛氭帶鍒舵尅鏉垮弽寮瑰皬鐞冨嚮纰庣爾鍧楋紝鍖呭惈澶氬叧鍗°€侀亾鍏锋帀钀戒笌鐢熷懡绯荤粺銆?- 鎿嶄綔锛氶紶鏍囥€佽Е灞忔垨閿洏绉诲姩鎸℃澘銆?- 鎴愮哗锛氭渶楂樺垎淇濆瓨鍦?localStorage銆?
+### 12. 澶┖灏勫嚮锛圫pace Shooter锛?- 鍦板潃锛歨ttps://snake-classic-casino.netlify.app/games/space-shooter/
+- 绫诲瀷锛氬姩浣?/ 灏勫嚮
+- 鐜╂硶锛氭帶鍒堕鑸瑰皠鍑绘晫浜烘尝娆★紝鎷惧彇閬撳叿骞舵寫鎴?Boss锛涘甫绮掑瓙鐖嗙偢鏁堟灉銆?- 鎿嶄綔锛氶敭鐩樻垨瑙﹀睆銆?- 鎴愮哗锛氭渶楂樺垎淇濆瓨鍦?localStorage銆?
+### 13. Paddle Duel 鍙屾媿瀵瑰喅
+- 鍦板潃锛歨ttps://snake-classic-casino.netlify.app/games/paddle-duel/
+- 绫诲瀷锛氬姩浣?/ 浣撹偛
+- 鐜╂硶锛氭帶鍒跺乏渚х悆鎷嶄笌 AI 瀵规垬锛屽厛寰?7 鍒嗚幏鑳滐紱鍑荤悆鐐硅秺闈犺竟锛屽弽寮硅搴﹁秺澶с€?- 闅惧害锛氳交鏉俱€佹爣鍑嗐€佹寫鎴樹笁妗?AI銆?- 鎿嶄綔锛氶紶鏍囥€佹墜鎸囨嫋鍔ㄣ€佹柟鍚戦敭 / WASD 鎴栧睆骞曚笂涓嬫寜閽紱绌烘牸 / P 鏆傚仠銆?- 鎴愮哗锛氭渶闀垮洖鍚堣褰曚繚瀛樺湪 localStorage銆?
+### 14. Pong 涔掍箵鐞?- 鍦板潃锛歨ttps://snake-classic-casino.netlify.app/games/pong/
+- 绫诲瀷锛氳鏈?/ 浣撹偛
+- 鐜╂硶锛氱粡鍏稿弻浜哄悓灞忎箳涔撳鎴橈紝甯﹁鍒嗙郴缁燂紝鍙皟鏁寸悆閫熴€?- 鎿嶄綔锛氶敭鐩樹笌瑙﹀睆銆?
+### 15. 濉旈槻锛圱ower Defense锛?- 鍦板潃锛歨ttps://snake-classic-casino.netlify.app/games/tower-defense/
+- 绫诲瀷锛氱瓥鐣?/ 濉旈槻
+- 鐜╂硶锛氬缓閫犲苟鍗囩骇澶氱鐐锛屾姷鎸′竴娉㈡尝鏁屼汉锛涜矾绾胯鍒掍笌璧勬簮鍒嗛厤鍐冲畾鑳滆礋銆?- 鎿嶄綔锛氱偣鍑诲缓閫犱笌鍗囩骇锛屾敮鎸佽Е灞忋€?
+### 16. 璺戦叿锛圗ndless Runner锛?- 鍦板潃锛歨ttps://snake-classic-casino.netlify.app/games/endless-runner/
+- 绫诲瀷锛氬姩浣?/ 璺戦叿
+- 鐜╂硶锛氭棤闄愬璺戯紝璺宠穬銆佹粦閾蹭笌浜屾璺筹紝鏀堕泦閲戝竵骞惰翰閬块殰纰嶃€?- 鐗硅壊锛氳宸儗鏅笌绋嬪簭鍖栧湴褰㈢敓鎴愩€?
+### 17. 杩峰锛圡aze锛?- 鍦板潃锛歨ttps://snake-classic-casino.netlify.app/games/maze/
+- 绫诲瀷锛氱泭鏅?/ 瀵昏矾
+- 鐜╂硶锛氱▼搴忓寲鐢熸垚杩峰锛屽鎵惧嚭鍙ｅ苟鎸戞垬鏈€浣崇敤鏃躲€?- 闅惧害锛氫笁绉嶅昂瀵搞€?- 鎿嶄綔锛氶敭鐩樻柟鍚戦敭鎴栬Е灞忔粦鍔ㄣ€?
+### 18. 婊戝姩鎷煎浘锛圫lide Puzzle锛?- 鍦板潃锛歨ttps://snake-classic-casino.netlify.app/games/slide-puzzle/
+- 绫诲瀷锛氱泭鏅?/ 鎷煎浘
+- 鐜╂硶锛?脳4 鏁板瓧鎷煎浘锛屾粦鍔ㄦ柟鍧楁寜椤哄簭鎺掑垪銆?- 鐗硅壊锛氫笁妗ｉ毦搴︺€佽鏃朵笌姝ユ暟缁熻锛屾敮鎸侀敭鐩樺拰瑙﹀睆銆?
+### 19. 璁板繂缈荤墝锛圡emory Match锛?- 鍦板潃锛歨ttps://snake-classic-casino.netlify.app/games/memory-match/
+- 绫诲瀷锛氱泭鏅?/ 璁板繂
+- 鐜╂硶锛?脳4 妫嬬洏銆?6 寮犲崱鐗囥€? 瀵瑰浘妗堬紱姣忔缈诲紑涓ゅ紶锛岄厤榻愬叏閮ㄥ嵆鑾疯儨銆?- 鎿嶄綔锛氱偣鍑汇€佽Е灞忥紝鎴?Tab + Enter / Space銆?- 鎴愮哗锛氭渶灏戞鏁颁笌鏈€鐭敤鏃朵繚瀛樺湪 localStorage銆?
+### 20. Hangman 鐚滆瘝
+- 鍦板潃锛歨ttps://snake-classic-casino.netlify.app/games/hangman/
+- 绫诲瀷锛氱泭鏅?/ 鐚滆瘝
+- 鐜╂硶锛氱粡鍏哥寽鍗曡瘝娓告垙锛屾渶澶?6 娆￠敊璇満浼氾紝鎸夊垎绫婚€夋嫨璇嶅簱銆?- 鎿嶄綔锛氬睆骞曞瓧姣嶉敭鐩樻垨瀹炰綋閿洏銆?
+### 21. 搴峰▉鐢熷懡娓告垙锛圙ame of Life锛?- 鍦板潃锛歨ttps://snake-classic-casino.netlify.app/games/game-of-life/
+- 绫诲瀷锛氭ā鎷?/ 缁嗚優鑷姩鏈?- 鐜╂硶锛氭寜搴峰▉瑙勫垯婕斿寲缁嗚優缃戞牸锛涘彲鐢荤瑪缂栬緫銆佸姞杞介璁惧浘妗堛€佽皟鑺傞€熷害涓庣缉鏀俱€?- 鎿嶄綔锛氶紶鏍囨垨瑙﹀睆缁樺埗銆?
+### 22. 娌欑洏妯℃嫙锛團alling Sand锛?- 鍦板潃锛歨ttps://snake-classic-casino.netlify.app/games/falling-sand/
+- 绫诲瀷锛氭矙鐩?/ 妯℃嫙
+- 鐜╂硶锛氭矙銆佹按銆佺伀銆佺煶銆佹湪绛夊绉嶇矑瀛愬疄鏃朵氦浜掞紝鍙楅噸鍔涘奖鍝嶃€?- 鎿嶄綔锛氱偣鍑绘垨鎷栧姩缁樺埗锛岃瀵熺矑瀛愮墿鐞嗘ā鎷熴€?
+## 濞变箰鍦烘紨绀哄垪琛紙铏氭嫙绛圭爜 路 鏃犵湡閽憋級
 
-### 1. 贪吃蛇经典版（Snake Classic）
-- 地址：https://snake-classic-casino.netlify.app/
-- 类型：休闲 / 街机
-- 玩法：20 列 × 15 行网格，每 150 毫秒移动一格，穿墙规则，吃到食物加 10 分并增长一格，撞到自身结束。
-- 操作：方向键或 WASD；触屏滑动或屏幕方向键；空格 / P 暂停；Enter 在结束后重开。
-- 成绩：最高分保存在浏览器 localStorage。
+### 23. 21 鐐规紨绀猴紙Blackjack Demo锛?- 鍦板潃锛歨ttps://snake-classic-casino.netlify.app/casino/blackjack/
+- 瑙勫垯锛? 鍓墝鐗岄澊锛堢害鍓?78 寮犳椂閲嶆礂锛夛紱搴勫鎵€鏈?17 鐐瑰仠鐗岋紱21 鐐癸紙Blackjack锛夋寜 3:2 璧斾粯锛涗繚闄?2:1锛涙渶澶氬垎 4 鎵嬶紱鍒?A 鑷姩鍋滅墝锛涘弻鍊嶄笅娉ㄤ粎闄愬墠涓ゅ紶銆?- 绛圭爜锛氳捣濮?1,000 铏氭嫙绛圭爜锛屾棤鍏呭€兼垨鎻愮幇鍔熻兘銆?- 鎿嶄綔锛氱偣鍑荤鐮佷笅娉紝浣跨敤瑕佺墝 / 鍋滅墝 / 鍔犲€?/ 鍒嗙墝 / 淇濋櫓鎸夐挳銆?- 鍙傝€冨簞瀹朵紭鍔匡細鍦ㄥ熀鏈瓥鐣ヤ笅绾︿负 0.5%锛堥殢瑙勫垯涓庣瓥鐣ュ彉鍖栵級銆?
+### 24. 娆ф床杞洏婕旂ず锛圗uropean Roulette Demo锛?- 鍦板潃锛歨ttps://snake-classic-casino.netlify.app/casino/roulette/
+- 瑙勫垯锛氬崟闆?37 鏍兼寮忚疆鐩橈紱鐩存敞 35:1銆佹墦绾匡紙dozen锛? 鍒楋紙column锛?:1銆佺孩榛?/ 濂囧伓 / 澶у皬 1:1銆?- 绛圭爜锛氳捣濮?1,000 铏氭嫙绛圭爜锛屽彲鍚屾椂鍦ㄥ涓牸瀛愮粍鍚堜笅娉紝鍘嗗彶寮€濂栬褰曚繚瀛樺湪鏈湴銆?- 鎿嶄綔锛氱偣鍑绘牸瀛愭斁绛圭爜銆佹棆杞寜閽紑濂栥€佹竻闄?/ 閲嶅涓婃敞銆?- 鍙傝€冨簞瀹朵紭鍔匡細2.70%锛堝崟闆惰疆鐩樻墍鏈夋爣鍑嗘敞椤癸級銆?
+### 25. 瑙嗛鎵戝厠婕旂ず锛圴ideo Poker Demo锛?/6 Jacks or Better锛?- 鍦板潃锛歨ttps://snake-classic-casino.netlify.app/casino/video-poker/
+- 瑙勫垯锛?2 寮犵墝锛屾瘡鎵嬮噸娲楀苟鍙戝嚭 5 寮狅紱璧斾粯琛ㄤ负 9/6 Jacks or Better锛?鈥? 鍒嗕笅娉紝5 鍒嗘弧娉ㄧ殗瀹跺悓鑺遍『鎸夋瘡鍒?800:1锛堟€婚 4,000锛夎禂浠樸€?- 绛圭爜锛氳捣濮?1,000 铏氭嫙绉垎锛屾寔鐗?/ 鎹㈢墝鍗曟墜娴佺▼銆?- 鍙傝€冨簞瀹朵紭鍔匡細绾?0.46%锛?/6 璧斾粯琛ㄣ€佹渶浼樼瓥鐣ワ級銆?
+## 閫氱敤鎿嶄綔涓庢暟鎹?
+- 閿洏锛氭柟鍚戦敭 / WASD 绉诲姩锛岀┖鏍兼垨 P 鏆傚仠锛堥€傜敤椤甸潰锛夛紝Enter 纭銆?- 瑙﹀睆锛氭粦鍔ㄣ€佹嫋鍔ㄣ€佸睆骞曟柟鍚戦敭鎴栧ぇ灏哄鎸夐挳锛涗笅娉ㄦ鍦ㄧ獎灞忓彲妯悜婊氬姩銆?- 鎴愮哗锛氭渶楂樺垎銆佹渶浣虫椂闂淬€佹鏁颁笌缁熻鍙繚瀛樺湪娴忚鍣?localStorage锛屼笉涓婁紶鏈嶅姟鍣ㄣ€?- 绂荤嚎锛氶娆¤闂悗锛孲ervice Worker 缂撳瓨绔欑偣澶栧３涓庢父鎴忛〉闈紱娓呴櫎绔欑偣鏁版嵁浼氬悓鏃舵竻闄ゆ垚缁╀笌缂撳瓨銆?- 鏃犺处鍙枫€佹棤鎺掕姒滀笂浼犮€佹棤琛屼负杩借釜銆佹棤绗笁鏂硅姹傘€?
+## 甯歌闂
 
-### 2. 2048 经典版（Merge 2048）
-- 地址：https://snake-classic-casino.netlify.app/games/merge-2048/
-- 类型：益智 / 数字
-- 玩法：4×4 棋盘，滑动合并相同数字，合成 2048 即达成目标，之后可继续挑战高分。
-- 操作：方向键、WASD、屏幕方向按钮或触屏滑动。
-- 特色：支持一步撤销、最高分记录、离线游玩。
+### 杩欎釜娓告垙鍚堥泦鏄厤璐圭殑鍚楋紵
+鏄€傚叏閮?25 娆炬父鎴忥紙22 娆捐鏈?/ 鐩婃櫤 + 3 娆惧ū涔愬満婕旂ず锛夐兘瀹屽叏鍏嶈垂锛屾病鏈夊箍鍛娿€佸唴璐垨娉ㄥ唽瑕佹眰銆備唬鐮佷互 MIT 鍗忚寮€婧愶紝鏂囧瓧鍐呭浠?CC BY 4.0 鎺堟潈銆?
+### 濞变箰鍦烘紨绀虹敤鐪熼挶鍚楋紵
+涓嶇敤銆備笁娆惧ū涔愬満椤甸潰鍙娇鐢ㄨ櫄鎷熺鐮佹紨绀猴紝娌℃湁鍏呭€笺€佹彁鐜般€佽浆璐︽垨濂栧搧鍏戞崲鍔熻兘锛屼笉鏋勬垚璧屽崥鏈嶅姟銆傞〉闈㈠睍绀虹殑搴勫浼樺娍浠呯敤浜庤鏄庢暟瀛︽湡鏈涳紝涓嶆瀯鎴愭姇娉ㄥ缓璁紱鍚勫湴娉曞緥涓嶅悓锛岃閬靛畧鎵€鍦ㄥ湴娉曞緥涓庡勾榫勯檺鍒躲€?
+### 鎵嬫満涓婅兘鐜╁悧锛?鍙互銆傛墍鏈夐〉闈㈠搷搴斿紡閫傞厤鎵嬫満鍜屽钩鏉匡細璐悆铔囥€丳addle Duel銆佹墦鐮栧潡涓庡お绌哄皠鍑绘敮鎸佹粦鍔ㄦ垨灞忓箷鎸夐挳锛?048 涓庢粦鍔ㄦ嫾鍥炬敮鎸佹粦鍔ㄦ鐩橈紝鎵浄鎻愪緵鏃楁爣妯″紡锛屾暟鐙笌浜斿瓙妫嬫湁瑙﹀睆妫嬬洏锛屽ū涔愬満涓夋鍦?320px 瀹藉害璧峰嵆鍙畬鏁存搷浣溿€?
+### 闇€瑕佷笅杞芥垨瀹夎鍚楋紵
+涓嶉渶瑕併€傛墦寮€缃戦〉鍗崇帺锛涙敮鎸?PWA 鐨勬祻瑙堝櫒鍙坊鍔犲埌涓诲睆骞曪紝棣栨鍔犺浇鍚庡彲绂荤嚎杩愯銆?
+### 鏈€楂樺垎鍜屾垚缁╀繚瀛樺湪鍝噷锛?鍙繚瀛樺湪褰撳墠娴忚鍣ㄧ殑 localStorage 涓紝涓嶄細涓婁紶銆傛竻闄ょ珯鐐规暟鎹垨鏇存崲璁惧鍚庝細閲嶇疆銆?
+### 鐢ㄤ簡浠€涔堟妧鏈紵
+鍘熺敓 HTML/CSS/JavaScript銆傛鐩樼被娓告垙浣跨敤 DOM 涓?CSS锛屽姩浣滄父鎴忎娇鐢?Canvas 2D锛屽ū涔愬満鐢?DOM/CSS 缁樺埗鐗屾涓庡崱鐗岋紱闅忔満鏁颁娇鐢ㄦ祻瑙堝櫒 Web Crypto銆傛棤妗嗘灦銆佹棤绗笁鏂硅姹傘€?
+### 鍙互浜屾寮€鍙戞垨鍟嗙敤鍚楋紵
+鍙互銆備唬鐮佷负 MIT 璁稿彲锛屽厑璁镐慨鏀广€佸垎鍙戜笌鍟嗕笟浣跨敤锛屽彧闇€淇濈暀鐗堟潈涓庤鍙０鏄庯紱鏂囧瓧涓庢彃鍥惧唴瀹逛负 CC BY 4.0锛岃浆杞介渶缃插悕骞堕摼鎺ュ洖鏈珯銆?
+## 寮曠敤寤鸿
 
-### 3. 扫雷经典版（Minesweeper Classic）
-- 地址：https://snake-classic-casino.netlify.app/games/minesweeper/
-- 类型：益智 / 逻辑推理
-- 难度：初级 9×9、中级 16×16、高级 16×24。
-- 玩法：首次点击保证安全；数字表示相邻八格中的地雷数；翻开所有安全格获胜。
-- 操作：左键翻开、右键插旗；手机可使用旗标模式；键盘方向键移动焦点。
-- 成绩：每档难度的最佳用时保存在 localStorage。
+- 绔欑偣鍚嶇О锛氳椽鍚冭泧缁忓吀鐗堬紙Snake Classic Arcade锛?- 寮曠敤娓告垙鏁伴噺鏃讹紝璇峰啓鈥?2 娆捐鏈?/ 鐩婃櫤娓告垙 + 3 娆捐櫄鎷熺鐮佸ū涔愬満婕旂ず锛屽叡 25 娆锯€濄€?- 寮曠敤濞变箰鍦哄唴瀹规椂锛岃鏄庣‘鏍囨敞鈥滆櫄鎷熺鐮佹紨绀猴紝鏃犵湡閽变笅娉ㄣ€佸厖鍊笺€佹彁鐜版垨濂栧搧鍏戞崲鈥濄€?- 鎺ㄨ崘寮曠敤鏍煎紡锛歋nake Classic Arcade锛屻€婄粡鍏歌鏈哄悎闆嗐€嬶紝https://vip-4.github.io/snake-classic/arcade/锛堣闂棩鏈燂細2026-10-30锛夈€?- 鑻辨枃绠€杩帮細Snake Classic Arcade is a free, open-source collection of 22 static browser games plus 3 virtual-chip casino demos. No install, account, ads, or real-money gambling.
 
-### 4. Wordle 中文猜词（Wordle）
-- 地址：https://snake-classic-casino.netlify.app/games/wordle/
-- 类型：益智 / 猜词
-- 玩法：每天一个五字母单词，最多 6 次机会；绿色表示位置正确，黄色表示字母存在但位置错误，灰色表示字母不存在。
-- 操作：屏幕字母键盘或实体键盘输入。
-- 特色：本地统计与成绩分享，不依赖服务器。
+## 鏉ユ簮涓庣讲鍚?
+- 璐悆铔囪鍒欎笌瀹炵幇鎬濊矾鍙傝€?Simple Game Tutorials 鐨?Snake 鏁欑▼锛圠脰VE 11 / Pygame Zero 1.2锛屼綔鑰?BerbaSoft锛屾暀绋嬩负鍏湁棰嗗煙锛夛細https://berbasoft.com/simplegametutorials/love/snake
+- 2048 鐢?Gabriele Cirulli 浜?2014 骞村彂甯冿紝鍘熶綔涓?MIT 璁稿彲锛涙湰绔欎负鐙珛瀹炵幇锛屾湭澶嶇敤鍘熶綔浠ｇ爜鎴栫礌鏉愩€?- Paddle Duel銆丳ong銆佹墦鐮栧潡銆佷縿缃楁柉鏂瑰潡绛変负缁忓吀鍏紑瑙勫垯鐨勫師鐢熷疄鐜帮紝鏈鐢ㄧ涓夋柟浠ｇ爜鎴栫礌鏉愩€?- 浜斿瓙妫嬨€佸洓瀛愯繛鐝犮€佷簳瀛楁銆佹暟鐙€佹帹绠卞瓙銆佹壂闆枫€乄ordle銆丠angman 绛変负鍏紑鐜╂硶瑙勫垯鐨勭嫭绔嬪疄鐜般€?- 21 鐐广€佽疆鐩樸€佽棰戞墤鍏嬩负涓氱晫鍏紑閫氱敤瑙勫垯鐨勭嫭绔嬪疄鐜帮紙鏃犲搧鐗屻€佹棤鐗堟潈绱犳潗锛夛紝浠呬綔涓哄厤璐规紨绀恒€?- 鏈珯椤甸潰涓哄師鐢?JavaScript 鐙珛瀹炵幇锛屾湭鍖呭惈浠讳綍鏁欑▼鐨?Lua 鎴?Python 婧愭枃浠躲€?
+## 閾炬帴
 
-### 5. 俄罗斯方块（Tetris）
-- 地址：https://snake-classic-casino.netlify.app/games/tetris/
-- 类型：街机 / 益智
-- 玩法：10×20 棋盘，7 种方块（I、O、T、S、Z、J、L），消行得分并提升等级。
-- 操作：旋转、左右移动、软降、硬降、hold 暂存；支持键盘与触屏。
-- 特色：幽灵方块落点提示，记录最高分与等级。
-
-### 6. 数独（Sudoku）
-- 地址：https://snake-classic-casino.netlify.app/games/sudoku/
-- 类型：益智 / 逻辑
-- 玩法：9×9 标准数独，每行、每列与每个 3×3 宫填入 1–9 且不重复；自动生成谜题。
-- 难度：三档。
-- 特色：笔记模式、计时与统计，支持键盘和触屏。
-
-### 7. 推箱子（Sokoban）
-- 地址：https://snake-classic-casino.netlify.app/games/sokoban/
-- 类型：益智 / 解谜
-- 玩法：把箱子推到目标点，规划路线避免把箱子推入死角；包含多个关卡。
-- 操作：方向键 / WASD 或屏幕方向按钮。
-- 特色：撤销、重做、关卡选择与最少步数记录。
-
-### 8. 五子棋（Gomoku）
-- 地址：https://snake-classic-casino.netlify.app/games/gomoku/
-- 类型：棋类 / 策略
-- 玩法：15×15 棋盘，双方轮流落子，先连成五子获胜。
-- 模式：三档 AI 人机对战与双人同屏。
-- 特色：禁手规则、悔棋与计时，支持键盘和触屏。
-
-### 9. 四子连珠（Connect Four）
-- 地址：https://snake-classic-casino.netlify.app/games/connect-four/
-- 类型：棋类 / 策略
-- 玩法：7×6 棋盘，棋子受重力下落，先连成四颗同色棋子（横、竖或斜线）获胜。
-- 模式：人机对战与双人同屏。
-
-### 10. 井字棋（Tic Tac Toe）
-- 地址：https://snake-classic-casino.netlify.app/games/tic-tac-toe/
-- 类型：棋类 / 休闲
-- 玩法：3×3 棋盘，双方轮流落子，先连成三子获胜。
-- 模式：双人同屏，附计分统计。
-
-### 11. 打砖块（Breakout）
-- 地址：https://snake-classic-casino.netlify.app/games/breakout/
-- 类型：街机 / 动作
-- 玩法：控制挡板反弹小球击碎砖块，包含多关卡、道具掉落与生命系统。
-- 操作：鼠标、触屏或键盘移动挡板。
-- 成绩：最高分保存在 localStorage。
-
-### 12. 太空射击（Space Shooter）
-- 地址：https://snake-classic-casino.netlify.app/games/space-shooter/
-- 类型：动作 / 射击
-- 玩法：控制飞船射击敌人波次，拾取道具并挑战 Boss；带粒子爆炸效果。
-- 操作：键盘或触屏。
-- 成绩：最高分保存在 localStorage。
-
-### 13. Paddle Duel 双拍对决
-- 地址：https://snake-classic-casino.netlify.app/games/paddle-duel/
-- 类型：动作 / 体育
-- 玩法：控制左侧球拍与 AI 对战，先得 7 分获胜；击球点越靠边，反弹角度越大。
-- 难度：轻松、标准、挑战三档 AI。
-- 操作：鼠标、手指拖动、方向键 / WASD 或屏幕上下按钮；空格 / P 暂停。
-- 成绩：最长回合记录保存在 localStorage。
-
-### 14. Pong 乒乓球
-- 地址：https://snake-classic-casino.netlify.app/games/pong/
-- 类型：街机 / 体育
-- 玩法：经典双人同屏乒乓对战，带计分系统，可调整球速。
-- 操作：键盘与触屏。
-
-### 15. 塔防（Tower Defense）
-- 地址：https://snake-classic-casino.netlify.app/games/tower-defense/
-- 类型：策略 / 塔防
-- 玩法：建造并升级多种炮塔，抵挡一波波敌人；路线规划与资源分配决定胜负。
-- 操作：点击建造与升级，支持触屏。
-
-### 16. 跑酷（Endless Runner）
-- 地址：https://snake-classic-casino.netlify.app/games/endless-runner/
-- 类型：动作 / 跑酷
-- 玩法：无限奔跑，跳跃、滑铲与二段跳，收集金币并躲避障碍。
-- 特色：视差背景与程序化地形生成。
-
-### 17. 迷宫（Maze）
-- 地址：https://snake-classic-casino.netlify.app/games/maze/
-- 类型：益智 / 寻路
-- 玩法：程序化生成迷宫，寻找出口并挑战最佳用时。
-- 难度：三种尺寸。
-- 操作：键盘方向键或触屏滑动。
-
-### 18. 滑动拼图（Slide Puzzle）
-- 地址：https://snake-classic-casino.netlify.app/games/slide-puzzle/
-- 类型：益智 / 拼图
-- 玩法：4×4 数字拼图，滑动方块按顺序排列。
-- 特色：三档难度、计时与步数统计，支持键盘和触屏。
-
-### 19. 记忆翻牌（Memory Match）
-- 地址：https://snake-classic-casino.netlify.app/games/memory-match/
-- 类型：益智 / 记忆
-- 玩法：4×4 棋盘、16 张卡片、8 对图案；每次翻开两张，配齐全部即获胜。
-- 操作：点击、触屏，或 Tab + Enter / Space。
-- 成绩：最少步数与最短用时保存在 localStorage。
-
-### 20. Hangman 猜词
-- 地址：https://snake-classic-casino.netlify.app/games/hangman/
-- 类型：益智 / 猜词
-- 玩法：经典猜单词游戏，最多 6 次错误机会，按分类选择词库。
-- 操作：屏幕字母键盘或实体键盘。
-
-### 21. 康威生命游戏（Game of Life）
-- 地址：https://snake-classic-casino.netlify.app/games/game-of-life/
-- 类型：模拟 / 细胞自动机
-- 玩法：按康威规则演化细胞网格；可画笔编辑、加载预设图案、调节速度与缩放。
-- 操作：鼠标或触屏绘制。
-
-### 22. 沙盘模拟（Falling Sand）
-- 地址：https://snake-classic-casino.netlify.app/games/falling-sand/
-- 类型：沙盒 / 模拟
-- 玩法：沙、水、火、石、木等多种粒子实时交互，受重力影响。
-- 操作：点击或拖动绘制，观察粒子物理模拟。
-
-## 娱乐场演示列表（虚拟筹码 · 无真钱）
-
-### 23. 21 点演示（Blackjack Demo）
-- 地址：https://snake-classic-casino.netlify.app/casino/blackjack/
-- 规则：6 副牌牌靴（约剩 78 张时重洗）；庄家所有 17 点停牌；21 点（Blackjack）按 3:2 赔付；保险 2:1；最多分 4 手；分 A 自动停牌；双倍下注仅限前两张。
-- 筹码：起始 1,000 虚拟筹码，无充值或提现功能。
-- 操作：点击筹码下注，使用要牌 / 停牌 / 加倍 / 分牌 / 保险按钮。
-- 参考庄家优势：在基本策略下约为 0.5%（随规则与策略变化）。
-
-### 24. 欧洲轮盘演示（European Roulette Demo）
-- 地址：https://snake-classic-casino.netlify.app/casino/roulette/
-- 规则：单零 37 格欧式轮盘；直注 35:1、打线（dozen）/ 列（column）2:1、红黑 / 奇偶 / 大小 1:1。
-- 筹码：起始 1,000 虚拟筹码，可同时在多个格子组合下注，历史开奖记录保存在本地。
-- 操作：点击格子放筹码、旋转按钮开奖、清除 / 重复上注。
-- 参考庄家优势：2.70%（单零轮盘所有标准注项）。
-
-### 25. 视频扑克演示（Video Poker Demo，9/6 Jacks or Better）
-- 地址：https://snake-classic-casino.netlify.app/casino/video-poker/
-- 规则：52 张牌，每手重洗并发出 5 张；赔付表为 9/6 Jacks or Better；1–5 分下注，5 分满注皇家同花顺按每分 800:1（总额 4,000）赔付。
-- 筹码：起始 1,000 虚拟积分，持牌 / 换牌单手流程。
-- 参考庄家优势：约 0.46%（9/6 赔付表、最优策略）。
-
-## 通用操作与数据
-
-- 键盘：方向键 / WASD 移动，空格或 P 暂停（适用页面），Enter 确认。
-- 触屏：滑动、拖动、屏幕方向键或大尺寸按钮；下注桌在窄屏可横向滚动。
-- 成绩：最高分、最佳时间、步数与统计只保存在浏览器 localStorage，不上传服务器。
-- 离线：首次访问后，Service Worker 缓存站点外壳与游戏页面；清除站点数据会同时清除成绩与缓存。
-- 无账号、无排行榜上传、无行为追踪、无第三方请求。
-
-## 常见问题
-
-### 这个游戏合集是免费的吗？
-是。全部 25 款游戏（22 款街机 / 益智 + 3 款娱乐场演示）都完全免费，没有广告、内购或注册要求。代码以 MIT 协议开源，文字内容以 CC BY 4.0 授权。
-
-### 娱乐场演示用真钱吗？
-不用。三款娱乐场页面只使用虚拟筹码演示，没有充值、提现、转账或奖品兑换功能，不构成赌博服务。页面展示的庄家优势仅用于说明数学期望，不构成投注建议；各地法律不同，请遵守所在地法律与年龄限制。
-
-### 手机上能玩吗？
-可以。所有页面响应式适配手机和平板：贪吃蛇、Paddle Duel、打砖块与太空射击支持滑动或屏幕按钮，2048 与滑动拼图支持滑动棋盘，扫雷提供旗标模式，数独与五子棋有触屏棋盘，娱乐场三款在 320px 宽度起即可完整操作。
-
-### 需要下载或安装吗？
-不需要。打开网页即玩；支持 PWA 的浏览器可添加到主屏幕，首次加载后可离线运行。
-
-### 最高分和成绩保存在哪里？
-只保存在当前浏览器的 localStorage 中，不会上传。清除站点数据或更换设备后会重置。
-
-### 用了什么技术？
-原生 HTML/CSS/JavaScript。棋盘类游戏使用 DOM 与 CSS，动作游戏使用 Canvas 2D，娱乐场用 DOM/CSS 绘制牌桌与卡牌；随机数使用浏览器 Web Crypto。无框架、无第三方请求。
-
-### 可以二次开发或商用吗？
-可以。代码为 MIT 许可，允许修改、分发与商业使用，只需保留版权与许可声明；文字与插图内容为 CC BY 4.0，转载需署名并链接回本站。
-
-## 引用建议
-
-- 站点名称：贪吃蛇经典版（Snake Classic Arcade）
-- 引用游戏数量时，请写“22 款街机 / 益智游戏 + 3 款虚拟筹码娱乐场演示，共 25 款”。
-- 引用娱乐场内容时，请明确标注“虚拟筹码演示，无真钱下注、充值、提现或奖品兑换”。
-- 推荐引用格式：Snake Classic Arcade，《经典街机合集》，https://snake-classic-casino.netlify.app/arcade/（访问日期：2026-10-30）。
-- 英文简述：Snake Classic Arcade is a free, open-source collection of 22 static browser games plus 3 virtual-chip casino demos. No install, account, ads, or real-money gambling.
-
-## 来源与署名
-
-- 贪吃蛇规则与实现思路参考 Simple Game Tutorials 的 Snake 教程（LÖVE 11 / Pygame Zero 1.2，作者 BerbaSoft，教程为公有领域）：https://berbasoft.com/simplegametutorials/love/snake
-- 2048 由 Gabriele Cirulli 于 2014 年发布，原作为 MIT 许可；本站为独立实现，未复用原作代码或素材。
-- Paddle Duel、Pong、打砖块、俄罗斯方块等为经典公开规则的原生实现，未复用第三方代码或素材。
-- 五子棋、四子连珠、井字棋、数独、推箱子、扫雷、Wordle、Hangman 等为公开玩法规则的独立实现。
-- 21 点、轮盘、视频扑克为业界公开通用规则的独立实现（无品牌、无版权素材），仅作为免费演示。
-- 本站页面为原生 JavaScript 独立实现，未包含任何教程的 Lua 或 Python 源文件。
-
-## 链接
-
-- 首页：https://snake-classic-casino.netlify.app/
-- 街机合集：https://snake-classic-casino.netlify.app/arcade/
-- 娱乐场演示：https://snake-classic-casino.netlify.app/casino/
-- Sitemap：https://snake-classic-casino.netlify.app/sitemap.xml
-- Robots：https://snake-classic-casino.netlify.app/robots.txt
+- 棣栭〉锛歨ttps://snake-classic-casino.netlify.app/
+- 琛楁満鍚堥泦锛歨ttps://snake-classic-casino.netlify.app/arcade/
+- 濞变箰鍦烘紨绀猴細https://vip-4.github.io/snake-classic/casino/
+- Sitemap锛歨ttps://snake-classic-casino.netlify.app/sitemap.xml
+- Robots锛歨ttps://snake-classic-casino.netlify.app/robots.txt
