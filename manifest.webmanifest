@@ -1,7 +1,7 @@
 {
-  "name": "贪吃蛇经典版 · Snake Classic",
+  "name": "贪吃蛇经典版 · Snake Classic Arcade",
   "short_name": "贪吃蛇",
-  "description": "免费、开源、零依赖的浏览器贪吃蛇游戏。20×15 网格，穿墙规则，本地最高分。",
+  "description": "免费、开源、零依赖的浏览器游戏合集：22 款街机与益智游戏，以及 3 款虚拟筹码娱乐场演示。",
   "lang": "zh-CN",
   "dir": "ltr",
   "start_url": "./",
@@ -29,6 +29,44 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "游戏合集",
+      "short_name": "合集",
+      "description": "浏览全部 22 款经典小游戏",
+      "url": "./arcade/"
+    },
+    {
+      "name": "娱乐场演示",
+      "short_name": "娱乐场",
+      "description": "21 点、轮盘、视频扑克虚拟筹码演示",
+      "url": "./casino/"
+    },
+    {
+      "name": "Wordle 中文猜词",
+      "short_name": "Wordle",
+      "description": "每天一个五字母单词，6 次机会",
+      "url": "./games/wordle/"
+    },
+    {
+      "name": "俄罗斯方块",
+      "short_name": "方块",
+      "description": "经典 10×20 堆叠与消行",
+      "url": "./games/tetris/"
+    },
+    {
+      "name": "2048 经典版",
+      "short_name": "2048",
+      "description": "合并数字，冲击 2048",
+      "url": "./games/merge-2048/"
+    },
+    {
+      "name": "扫雷经典版",
+      "short_name": "扫雷",
+      "description": "三档难度的经典扫雷",
+      "url": "./games/minesweeper/"
     }
   ]
 }
