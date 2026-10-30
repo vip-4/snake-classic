@@ -1,11 +1,11 @@
-// Wordle 中文猜词 — 原生 JS 实现
+// Wordle 涓枃鐚滆瘝 鈥?鍘熺敓 JS 瀹炵幇
 (function () {
   'use strict';
 
   const WORD_LENGTH = 5;
   const MAX_GUESSES = 6;
 
-  // 常用五字母中文词汇（拼音/英文单词，便于输入）
+  // 甯哥敤浜斿瓧姣嶄腑鏂囪瘝姹囷紙鎷奸煶/鑻辨枃鍗曡瘝锛屼究浜庤緭鍏ワ級
   const WORD_LIST = [
     'apple', 'grape', 'lemon', 'mango', 'peach', 'berry', 'melon', 'olive',
     'cherry', 'plum', 'kiwi', 'fig', 'date', 'pear', 'lime', 'coconut',
@@ -122,7 +122,7 @@
     'cloth', 'leather', 'silk', 'wool', 'cotton', 'linen', 'fur', 'hide',
   ];
 
-  // 每日单词：基于日期的确定性选择
+  // 姣忔棩鍗曡瘝锛氬熀浜庢棩鏈熺殑纭畾鎬ч€夋嫨
   function getDailyWord() {
     const now = new Date();
     const seed = now.getFullYear() * 10000 + (now.getMonth() + 1) * 100 + now.getDate();
@@ -130,13 +130,12 @@
     return WORD_LIST[idx].toUpperCase();
   }
 
-  // 随机单词
+  // 闅忔満鍗曡瘝
   function getRandomWord() {
     return WORD_LIST[Math.floor(Math.random() * WORD_LIST.length)].toUpperCase();
   }
 
-  // 状态
-  let targetWord = '';
+  // 鐘舵€?  let targetWord = '';
   let currentGuess = '';
   let guesses = [];
   let gameOver = false;
@@ -150,8 +149,7 @@
   const winRateEl = document.getElementById('win-rate');
   const liveEl = document.getElementById('live');
 
-  // 初始化网格
-  function initGrid() {
+  // 鍒濆鍖栫綉鏍?  function initGrid() {
     gridEl.innerHTML = '';
     for (let r = 0; r < MAX_GUESSES; r++) {
       const row = document.createElement('div');
@@ -161,15 +159,14 @@
         const cell = document.createElement('div');
         cell.className = 'wordle-cell';
         cell.setAttribute('role', 'gridcell');
-        cell.setAttribute('aria-label', `第 ${r + 1} 行第 ${c + 1} 列`);
+        cell.setAttribute('aria-label', `绗?${r + 1} 琛岀 ${c + 1} 鍒梎);
         row.appendChild(cell);
       }
       gridEl.appendChild(row);
     }
   }
 
-  // 初始化键盘
-  const KEYBOARD_ROWS = [
+  // 鍒濆鍖栭敭鐩?  const KEYBOARD_ROWS = [
     ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
     ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
     ['Enter', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', 'Backspace'],
@@ -184,16 +181,16 @@
         const btn = document.createElement('button');
         btn.className = 'wordle-key';
         if (key === 'Enter') {
-          btn.textContent = '回车';
+          btn.textContent = '鍥炶溅';
           btn.classList.add('wordle-key--wide');
         } else if (key === 'Backspace') {
-          btn.textContent = '⌫';
+          btn.textContent = '鈱?;
           btn.classList.add('wordle-key--wide');
         } else {
           btn.textContent = key;
         }
         btn.dataset.key = key;
-        btn.setAttribute('aria-label', key === 'Enter' ? '提交' : key === 'Backspace' ? '删除' : key);
+        btn.setAttribute('aria-label', key === 'Enter' ? '鎻愪氦' : key === 'Backspace' ? '鍒犻櫎' : key);
         btn.addEventListener('click', () => handleKey(key));
         rowEl.appendChild(btn);
       }
@@ -201,7 +198,7 @@
     }
   }
 
-  // 处理按键
+  // 澶勭悊鎸夐敭
   function handleKey(key) {
     if (gameOver) return;
     if (key === 'Enter') {
@@ -215,7 +212,7 @@
     }
   }
 
-  // 更新网格显示
+  // 鏇存柊缃戞牸鏄剧ず
   function updateGrid() {
     const rowIndex = guesses.length;
     const row = gridEl.children[rowIndex];
@@ -228,23 +225,23 @@
     }
   }
 
-  // 提交猜测
+  // 鎻愪氦鐚滄祴
   function submitGuess() {
     if (currentGuess.length !== WORD_LENGTH) {
       shakeRow(guesses.length);
-      announce('请输入 5 个字母');
+      announce('璇疯緭鍏?5 涓瓧姣?);
       return;
     }
     if (!WORD_LIST.includes(currentGuess.toLowerCase())) {
       shakeRow(guesses.length);
-      announce('不是有效单词');
+      announce('涓嶆槸鏈夋晥鍗曡瘝');
       return;
     }
 
     const result = evaluateGuess(currentGuess, targetWord);
     guesses.push({ word: currentGuess, result });
 
-    // 更新网格颜色
+    // 鏇存柊缃戞牸棰滆壊
     const rowIndex = guesses.length - 1;
     const row = gridEl.children[rowIndex];
     for (let c = 0; c < WORD_LENGTH; c++) {
@@ -252,10 +249,10 @@
       cell.classList.add('wordle-cell--' + result[c]);
     }
 
-    // 更新键盘颜色
+    // 鏇存柊閿洏棰滆壊
     updateKeyboardColors(currentGuess, result);
 
-    // 检查胜利/失败
+    // 妫€鏌ヨ儨鍒?澶辫触
     if (currentGuess === targetWord) {
       gameOver = true;
       stats.games++;
@@ -265,7 +262,7 @@
       stats.guessDistribution[guesses.length - 1]++;
       saveStats();
       updateStats();
-      announce('恭喜！猜中了！');
+      announce('鎭枩锛佺寽涓簡锛?);
       setTimeout(() => {
         showResult(true);
       }, 500);
@@ -275,23 +272,23 @@
       stats.streak = 0;
       saveStats();
       updateStats();
-      announce('游戏结束，答案是 ' + targetWord);
+      announce('娓告垙缁撴潫锛岀瓟妗堟槸 ' + targetWord);
       setTimeout(() => {
         showResult(false);
       }, 500);
     } else {
       currentGuess = '';
-      announce(`第 ${guesses.length} 次猜测`);
+      announce(`绗?${guesses.length} 娆＄寽娴媊);
     }
   }
 
-  // 评估猜测
+  // 璇勪及鐚滄祴
   function evaluateGuess(guess, target) {
     const result = new Array(WORD_LENGTH).fill('absent');
     const targetChars = target.split('');
     const guessChars = guess.split('');
 
-    // 第一轮：标记 correct
+    // 绗竴杞細鏍囪 correct
     for (let i = 0; i < WORD_LENGTH; i++) {
       if (guessChars[i] === targetChars[i]) {
         result[i] = 'correct';
@@ -299,7 +296,7 @@
       }
     }
 
-    // 第二轮：标记 present
+    // 绗簩杞細鏍囪 present
     for (let i = 0; i < WORD_LENGTH; i++) {
       if (result[i] === 'correct') continue;
       const idx = targetChars.indexOf(guessChars[i]);
@@ -312,7 +309,7 @@
     return result;
   }
 
-  // 更新键盘颜色
+  // 鏇存柊閿洏棰滆壊
   function updateKeyboardColors(guess, result) {
     const keys = keyboardEl.querySelectorAll('.wordle-key');
     for (let i = 0; i < WORD_LENGTH; i++) {
@@ -320,7 +317,7 @@
       const color = result[i];
       for (const key of keys) {
         if (key.dataset.key === letter) {
-          // 优先级：correct > present > absent
+          // 浼樺厛绾э細correct > present > absent
           const current = key.dataset.color || '';
           if (current === 'correct') continue;
           if (color === 'correct' || (color === 'present' && current !== 'correct')) {
@@ -336,35 +333,34 @@
     }
   }
 
-  // 抖动行
-  function shakeRow(rowIndex) {
+  // 鎶栧姩琛?  function shakeRow(rowIndex) {
     const row = gridEl.children[rowIndex];
     if (!row) return;
     row.classList.add('wordle-row--shake');
     setTimeout(() => row.classList.remove('wordle-row--shake'), 600);
   }
 
-  // 显示结果
+  // 鏄剧ず缁撴灉
   function showResult(won) {
     const overlay = document.createElement('div');
     overlay.className = 'wordle-result';
     overlay.innerHTML = `
       <div class="wordle-result-card">
-        <h2>${won ? '🎉 恭喜猜中！' : '😢 游戏结束'}</h2>
-        <p>答案：<strong>${targetWord}</strong></p>
-        <p>猜测次数：${guesses.length}/6</p>
+        <h2>${won ? '馃帀 鎭枩鐚滀腑锛? : '馃槩 娓告垙缁撴潫'}</h2>
+        <p>绛旀锛?strong>${targetWord}</strong></p>
+        <p>鐚滄祴娆℃暟锛?{guesses.length}/6</p>
         <div class="wordle-stats">
-          <div><span>总局数</span><strong>${stats.games}</strong></div>
-          <div><span>胜率</span><strong>${stats.games ? Math.round(stats.wins / stats.games * 100) : 0}%</strong></div>
-          <div><span>连胜</span><strong>${stats.streak}</strong></div>
-          <div><span>最高连胜</span><strong>${stats.maxStreak}</strong></div>
+          <div><span>鎬诲眬鏁?/span><strong>${stats.games}</strong></div>
+          <div><span>鑳滅巼</span><strong>${stats.games ? Math.round(stats.wins / stats.games * 100) : 0}%</strong></div>
+          <div><span>杩炶儨</span><strong>${stats.streak}</strong></div>
+          <div><span>鏈€楂樿繛鑳?/span><strong>${stats.maxStreak}</strong></div>
         </div>
         <div class="wordle-dist">
           ${stats.guessDistribution.map((n, i) => `<div><span>${i + 1}</span><div class="wordle-dist-bar" style="width:${Math.max(4, n / Math.max(1, Math.max(...stats.guessDistribution)) * 100)}%"></div><span>${n}</span></div>`).join('')}
         </div>
         <div class="cta-row">
-          <button class="btn btn-primary" id="result-new">新游戏</button>
-          <button class="btn btn-ghost" id="result-share">分享成绩</button>
+          <button class="btn btn-primary" id="result-new">鏂版父鎴?/button>
+          <button class="btn btn-ghost" id="result-share">鍒嗕韩鎴愮哗</button>
         </div>
       </div>
     `;
@@ -379,25 +375,24 @@
     });
   }
 
-  // 分享成绩
+  // 鍒嗕韩鎴愮哗
   function shareResult(won) {
     const emoji = guesses.map(g => g.result.map(r => {
-      if (r === 'correct') return '🟩';
-      if (r === 'present') return '🟨';
-      return '⬛';
+      if (r === 'correct') return '馃煩';
+      if (r === 'present') return '馃煥';
+      return '猬?;
     }).join('')).join('\n');
-    const text = `Wordle ${won ? guesses.length : 'X'}/6\n\n${emoji}\n\nhttps://snake-classic-casino.netlify.app/games/wordle/`;
+    const text = `Wordle ${won ? guesses.length : 'X'}/6\n\n${emoji}\n\nhttps://vip-4.github.io/snake-classic/games/wordle/`;
     if (navigator.share) {
-      navigator.share({ title: 'Wordle 成绩', text }).catch(() => {});
+      navigator.share({ title: 'Wordle 鎴愮哗', text }).catch(() => {});
     } else {
       navigator.clipboard.writeText(text).then(() => {
-        announce('成绩已复制到剪贴板');
+        announce('鎴愮哗宸插鍒跺埌鍓创鏉?);
       }).catch(() => {});
     }
   }
 
-  // 新游戏
-  function newGame() {
+  // 鏂版父鎴?  function newGame() {
     targetWord = getRandomWord();
     currentGuess = '';
     guesses = [];
@@ -405,10 +400,10 @@
     initGrid();
     initKeyboard();
     updateStats();
-    announce('新游戏开始');
+    announce('鏂版父鎴忓紑濮?);
   }
 
-  // 每日游戏
+  // 姣忔棩娓告垙
   function dailyGame() {
     targetWord = getDailyWord();
     currentGuess = '';
@@ -417,10 +412,10 @@
     initGrid();
     initKeyboard();
     updateStats();
-    announce('每日挑战开始');
+    announce('姣忔棩鎸戞垬寮€濮?);
   }
 
-  // 统计
+  // 缁熻
   function loadStats() {
     try {
       const raw = localStorage.getItem('wordle-stats');
@@ -441,14 +436,14 @@
     winRateEl.textContent = stats.games ? Math.round(stats.wins / stats.games * 100) + '%' : '0%';
   }
 
-  // 公告
+  // 鍏憡
   function announce(msg) {
     if (liveEl) {
       liveEl.textContent = msg;
     }
   }
 
-  // 键盘事件
+  // 閿洏浜嬩欢
   document.addEventListener('keydown', (e) => {
     if (e.ctrlKey || e.metaKey || e.altKey) return;
     const key = e.key;
@@ -464,14 +459,13 @@
     }
   });
 
-  // 按钮事件
+  // 鎸夐挳浜嬩欢
   document.getElementById('new-game').addEventListener('click', newGame);
   document.getElementById('share').addEventListener('click', () => {
     if (guesses.length > 0) shareResult(gameOver && currentGuess === targetWord);
   });
 
-  // 初始化
-  initGrid();
+  // 鍒濆鍖?  initGrid();
   initKeyboard();
   dailyGame();
 })();
