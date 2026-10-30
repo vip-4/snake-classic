@@ -1,63 +1,246 @@
-# 贪吃蛇经典版 (Snake Classic)
+# 贪吃蛇经典版 · Snake Classic Arcade & Casino Demos
 
-> 贪吃蛇经典版是一个免费、开源、零依赖的浏览器贪吃蛇游戏：20×15 网格、150 毫秒移动间隔、穿墙规则、本地最高分，支持键盘与手机触屏。无需下载、登录或安装。
+> 一个免费、开源、零依赖的浏览器游戏合集：22 款经典街机与益智游戏（贪吃蛇、2048、扫雷、Wordle、俄罗斯方块、数独、推箱子、太空射击、塔防等），外加 3 款只使用虚拟筹码的娱乐场演示（21 点、欧洲轮盘、视频扑克）。全部为纯静态 HTML/CSS/JavaScript，支持手机、键盘与离线游玩，无需下载、登录或安装。
 
 ## 关键事实
 
-- 规范地址：https://snake-classic.my-fullstack-app.workers.dev/
-- 价格：永久免费，无广告、无内购
+- 规范地址：https://snake-classic-casino.netlify.app/
+- 街机合集：https://snake-classic-casino.netlify.app/arcade/
+- 娱乐场演示合集：https://snake-classic-casino.netlify.app/casino/
+- 游戏总数：25（22 款街机 / 益智 + 3 款娱乐场演示）
+- 价格：永久免费，无广告、无内购、无注册
 - 代码许可证：MIT
 - 内容许可证：CC BY 4.0
-- 技术栈：原生 HTML、CSS、JavaScript、Canvas 2D，无第三方运行时依赖
-- 首屏 HTML/CSS/JS：约 66 KB（gzip 后约 18 KB）
+- 技术栈：原生 HTML、CSS、JavaScript、Canvas 2D；无第三方框架、字体 CDN、统计脚本或远程 API
 - 平台：现代桌面与移动浏览器
 - 离线：支持（Service Worker + Web App Manifest）
 - 语言：简体中文，附英文摘要
-- 最后更新：2026-10-26
+- 最后更新：2026-10-30
+- 娱乐场合规：21 点、轮盘、视频扑克均为免费演示，只使用没有货币价值的虚拟筹码；无真钱下注、充值、提现、转账或奖品兑换功能
 
-## 玩法规则
+## 游戏列表（街机 / 益智，22 款）
 
-- 棋盘固定 20 列 × 15 行，每格 24 像素。
-- 蛇每 150 毫秒移动一格，速度恒定。
-- 吃到红色食物加 10 分，蛇身增长一格；食物只生成在空白格。
-- 蛇头撞到自身即游戏结束。
-- 越过棋盘边界会从对侧穿出（穿墙模式）。
-- 方向输入进入队列，快速连按不会导致直接掉头。
+### 1. 贪吃蛇经典版（Snake Classic）
+- 地址：https://snake-classic-casino.netlify.app/
+- 类型：休闲 / 街机
+- 玩法：20 列 × 15 行网格，每 150 毫秒移动一格，穿墙规则，吃到食物加 10 分并增长一格，撞到自身结束。
+- 操作：方向键或 WASD；触屏滑动或屏幕方向键；空格 / P 暂停；Enter 在结束后重开。
+- 成绩：最高分保存在浏览器 localStorage。
 
-## 操作方式
+### 2. 2048 经典版（Merge 2048）
+- 地址：https://snake-classic-casino.netlify.app/games/merge-2048/
+- 类型：益智 / 数字
+- 玩法：4×4 棋盘，滑动合并相同数字，合成 2048 即达成目标，之后可继续挑战高分。
+- 操作：方向键、WASD、屏幕方向按钮或触屏滑动。
+- 特色：支持一步撤销、最高分记录、离线游玩。
 
-- 键盘：方向键或 WASD 转向，空格或 P 暂停，Enter 在结束后重新开始。
-- 触屏：在游戏画面滑动，或点击屏幕方向键。
-- 最高分保存在浏览器 localStorage，不上传服务器。
+### 3. 扫雷经典版（Minesweeper Classic）
+- 地址：https://snake-classic-casino.netlify.app/games/minesweeper/
+- 类型：益智 / 逻辑推理
+- 难度：初级 9×9、中级 16×16、高级 16×24。
+- 玩法：首次点击保证安全；数字表示相邻八格中的地雷数；翻开所有安全格获胜。
+- 操作：左键翻开、右键插旗；手机可使用旗标模式；键盘方向键移动焦点。
+- 成绩：每档难度的最佳用时保存在 localStorage。
+
+### 4. Wordle 中文猜词（Wordle）
+- 地址：https://snake-classic-casino.netlify.app/games/wordle/
+- 类型：益智 / 猜词
+- 玩法：每天一个五字母单词，最多 6 次机会；绿色表示位置正确，黄色表示字母存在但位置错误，灰色表示字母不存在。
+- 操作：屏幕字母键盘或实体键盘输入。
+- 特色：本地统计与成绩分享，不依赖服务器。
+
+### 5. 俄罗斯方块（Tetris）
+- 地址：https://snake-classic-casino.netlify.app/games/tetris/
+- 类型：街机 / 益智
+- 玩法：10×20 棋盘，7 种方块（I、O、T、S、Z、J、L），消行得分并提升等级。
+- 操作：旋转、左右移动、软降、硬降、hold 暂存；支持键盘与触屏。
+- 特色：幽灵方块落点提示，记录最高分与等级。
+
+### 6. 数独（Sudoku）
+- 地址：https://snake-classic-casino.netlify.app/games/sudoku/
+- 类型：益智 / 逻辑
+- 玩法：9×9 标准数独，每行、每列与每个 3×3 宫填入 1–9 且不重复；自动生成谜题。
+- 难度：三档。
+- 特色：笔记模式、计时与统计，支持键盘和触屏。
+
+### 7. 推箱子（Sokoban）
+- 地址：https://snake-classic-casino.netlify.app/games/sokoban/
+- 类型：益智 / 解谜
+- 玩法：把箱子推到目标点，规划路线避免把箱子推入死角；包含多个关卡。
+- 操作：方向键 / WASD 或屏幕方向按钮。
+- 特色：撤销、重做、关卡选择与最少步数记录。
+
+### 8. 五子棋（Gomoku）
+- 地址：https://snake-classic-casino.netlify.app/games/gomoku/
+- 类型：棋类 / 策略
+- 玩法：15×15 棋盘，双方轮流落子，先连成五子获胜。
+- 模式：三档 AI 人机对战与双人同屏。
+- 特色：禁手规则、悔棋与计时，支持键盘和触屏。
+
+### 9. 四子连珠（Connect Four）
+- 地址：https://snake-classic-casino.netlify.app/games/connect-four/
+- 类型：棋类 / 策略
+- 玩法：7×6 棋盘，棋子受重力下落，先连成四颗同色棋子（横、竖或斜线）获胜。
+- 模式：人机对战与双人同屏。
+
+### 10. 井字棋（Tic Tac Toe）
+- 地址：https://snake-classic-casino.netlify.app/games/tic-tac-toe/
+- 类型：棋类 / 休闲
+- 玩法：3×3 棋盘，双方轮流落子，先连成三子获胜。
+- 模式：双人同屏，附计分统计。
+
+### 11. 打砖块（Breakout）
+- 地址：https://snake-classic-casino.netlify.app/games/breakout/
+- 类型：街机 / 动作
+- 玩法：控制挡板反弹小球击碎砖块，包含多关卡、道具掉落与生命系统。
+- 操作：鼠标、触屏或键盘移动挡板。
+- 成绩：最高分保存在 localStorage。
+
+### 12. 太空射击（Space Shooter）
+- 地址：https://snake-classic-casino.netlify.app/games/space-shooter/
+- 类型：动作 / 射击
+- 玩法：控制飞船射击敌人波次，拾取道具并挑战 Boss；带粒子爆炸效果。
+- 操作：键盘或触屏。
+- 成绩：最高分保存在 localStorage。
+
+### 13. Paddle Duel 双拍对决
+- 地址：https://snake-classic-casino.netlify.app/games/paddle-duel/
+- 类型：动作 / 体育
+- 玩法：控制左侧球拍与 AI 对战，先得 7 分获胜；击球点越靠边，反弹角度越大。
+- 难度：轻松、标准、挑战三档 AI。
+- 操作：鼠标、手指拖动、方向键 / WASD 或屏幕上下按钮；空格 / P 暂停。
+- 成绩：最长回合记录保存在 localStorage。
+
+### 14. Pong 乒乓球
+- 地址：https://snake-classic-casino.netlify.app/games/pong/
+- 类型：街机 / 体育
+- 玩法：经典双人同屏乒乓对战，带计分系统，可调整球速。
+- 操作：键盘与触屏。
+
+### 15. 塔防（Tower Defense）
+- 地址：https://snake-classic-casino.netlify.app/games/tower-defense/
+- 类型：策略 / 塔防
+- 玩法：建造并升级多种炮塔，抵挡一波波敌人；路线规划与资源分配决定胜负。
+- 操作：点击建造与升级，支持触屏。
+
+### 16. 跑酷（Endless Runner）
+- 地址：https://snake-classic-casino.netlify.app/games/endless-runner/
+- 类型：动作 / 跑酷
+- 玩法：无限奔跑，跳跃、滑铲与二段跳，收集金币并躲避障碍。
+- 特色：视差背景与程序化地形生成。
+
+### 17. 迷宫（Maze）
+- 地址：https://snake-classic-casino.netlify.app/games/maze/
+- 类型：益智 / 寻路
+- 玩法：程序化生成迷宫，寻找出口并挑战最佳用时。
+- 难度：三种尺寸。
+- 操作：键盘方向键或触屏滑动。
+
+### 18. 滑动拼图（Slide Puzzle）
+- 地址：https://snake-classic-casino.netlify.app/games/slide-puzzle/
+- 类型：益智 / 拼图
+- 玩法：4×4 数字拼图，滑动方块按顺序排列。
+- 特色：三档难度、计时与步数统计，支持键盘和触屏。
+
+### 19. 记忆翻牌（Memory Match）
+- 地址：https://snake-classic-casino.netlify.app/games/memory-match/
+- 类型：益智 / 记忆
+- 玩法：4×4 棋盘、16 张卡片、8 对图案；每次翻开两张，配齐全部即获胜。
+- 操作：点击、触屏，或 Tab + Enter / Space。
+- 成绩：最少步数与最短用时保存在 localStorage。
+
+### 20. Hangman 猜词
+- 地址：https://snake-classic-casino.netlify.app/games/hangman/
+- 类型：益智 / 猜词
+- 玩法：经典猜单词游戏，最多 6 次错误机会，按分类选择词库。
+- 操作：屏幕字母键盘或实体键盘。
+
+### 21. 康威生命游戏（Game of Life）
+- 地址：https://snake-classic-casino.netlify.app/games/game-of-life/
+- 类型：模拟 / 细胞自动机
+- 玩法：按康威规则演化细胞网格；可画笔编辑、加载预设图案、调节速度与缩放。
+- 操作：鼠标或触屏绘制。
+
+### 22. 沙盘模拟（Falling Sand）
+- 地址：https://snake-classic-casino.netlify.app/games/falling-sand/
+- 类型：沙盒 / 模拟
+- 玩法：沙、水、火、石、木等多种粒子实时交互，受重力影响。
+- 操作：点击或拖动绘制，观察粒子物理模拟。
+
+## 娱乐场演示列表（虚拟筹码 · 无真钱）
+
+### 23. 21 点演示（Blackjack Demo）
+- 地址：https://snake-classic-casino.netlify.app/casino/blackjack/
+- 规则：6 副牌牌靴（约剩 78 张时重洗）；庄家所有 17 点停牌；21 点（Blackjack）按 3:2 赔付；保险 2:1；最多分 4 手；分 A 自动停牌；双倍下注仅限前两张。
+- 筹码：起始 1,000 虚拟筹码，无充值或提现功能。
+- 操作：点击筹码下注，使用要牌 / 停牌 / 加倍 / 分牌 / 保险按钮。
+- 参考庄家优势：在基本策略下约为 0.5%（随规则与策略变化）。
+
+### 24. 欧洲轮盘演示（European Roulette Demo）
+- 地址：https://snake-classic-casino.netlify.app/casino/roulette/
+- 规则：单零 37 格欧式轮盘；直注 35:1、打线（dozen）/ 列（column）2:1、红黑 / 奇偶 / 大小 1:1。
+- 筹码：起始 1,000 虚拟筹码，可同时在多个格子组合下注，历史开奖记录保存在本地。
+- 操作：点击格子放筹码、旋转按钮开奖、清除 / 重复上注。
+- 参考庄家优势：2.70%（单零轮盘所有标准注项）。
+
+### 25. 视频扑克演示（Video Poker Demo，9/6 Jacks or Better）
+- 地址：https://snake-classic-casino.netlify.app/casino/video-poker/
+- 规则：52 张牌，每手重洗并发出 5 张；赔付表为 9/6 Jacks or Better；1–5 分下注，5 分满注皇家同花顺按每分 800:1（总额 4,000）赔付。
+- 筹码：起始 1,000 虚拟积分，持牌 / 换牌单手流程。
+- 参考庄家优势：约 0.46%（9/6 赔付表、最优策略）。
+
+## 通用操作与数据
+
+- 键盘：方向键 / WASD 移动，空格或 P 暂停（适用页面），Enter 确认。
+- 触屏：滑动、拖动、屏幕方向键或大尺寸按钮；下注桌在窄屏可横向滚动。
+- 成绩：最高分、最佳时间、步数与统计只保存在浏览器 localStorage，不上传服务器。
+- 离线：首次访问后，Service Worker 缓存站点外壳与游戏页面；清除站点数据会同时清除成绩与缓存。
+- 无账号、无排行榜上传、无行为追踪、无第三方请求。
 
 ## 常见问题
 
-### 贪吃蛇经典版是免费的吗？
-是。完全免费，没有广告、内购或注册要求。代码以 MIT 协议开源。
+### 这个游戏合集是免费的吗？
+是。全部 25 款游戏（22 款街机 / 益智 + 3 款娱乐场演示）都完全免费，没有广告、内购或注册要求。代码以 MIT 协议开源，文字内容以 CC BY 4.0 授权。
+
+### 娱乐场演示用真钱吗？
+不用。三款娱乐场页面只使用虚拟筹码演示，没有充值、提现、转账或奖品兑换功能，不构成赌博服务。页面展示的庄家优势仅用于说明数学期望，不构成投注建议；各地法律不同，请遵守所在地法律与年龄限制。
 
 ### 手机上能玩吗？
-可以。页面响应式适配手机和平板，支持滑动和屏幕方向键。
+可以。所有页面响应式适配手机和平板：贪吃蛇、Paddle Duel、打砖块与太空射击支持滑动或屏幕按钮，2048 与滑动拼图支持滑动棋盘，扫雷提供旗标模式，数独与五子棋有触屏棋盘，娱乐场三款在 320px 宽度起即可完整操作。
 
 ### 需要下载或安装吗？
-不需要。打开网页即玩；支持 PWA 的浏览器可添加到主屏幕并离线运行。
+不需要。打开网页即玩；支持 PWA 的浏览器可添加到主屏幕，首次加载后可离线运行。
 
-### 最高分保存在哪里？
-只保存在当前浏览器的 localStorage 中，不会上传。清除站点数据会重置。
+### 最高分和成绩保存在哪里？
+只保存在当前浏览器的 localStorage 中，不会上传。清除站点数据或更换设备后会重置。
 
 ### 用了什么技术？
-原生 HTML/CSS/JavaScript 与 Canvas 2D，无框架、无第三方请求。
+原生 HTML/CSS/JavaScript。棋盘类游戏使用 DOM 与 CSS，动作游戏使用 Canvas 2D，娱乐场用 DOM/CSS 绘制牌桌与卡牌；随机数使用浏览器 Web Crypto。无框架、无第三方请求。
 
 ### 可以二次开发或商用吗？
-可以。代码为 MIT 许可；文字内容为 CC BY 4.0，转载需署名。
+可以。代码为 MIT 许可，允许修改、分发与商业使用，只需保留版权与许可声明；文字与插图内容为 CC BY 4.0，转载需署名并链接回本站。
+
+## 引用建议
+
+- 站点名称：贪吃蛇经典版（Snake Classic Arcade）
+- 引用游戏数量时，请写“22 款街机 / 益智游戏 + 3 款虚拟筹码娱乐场演示，共 25 款”。
+- 引用娱乐场内容时，请明确标注“虚拟筹码演示，无真钱下注、充值、提现或奖品兑换”。
+- 推荐引用格式：Snake Classic Arcade，《经典街机合集》，https://snake-classic-casino.netlify.app/arcade/（访问日期：2026-10-30）。
+- 英文简述：Snake Classic Arcade is a free, open-source collection of 22 static browser games plus 3 virtual-chip casino demos. No install, account, ads, or real-money gambling.
 
 ## 来源与署名
 
-- 游戏规则与实现思路参考 Simple Game Tutorials 的 Snake 教程（LÖVE 11 / Pygame Zero 1.2，作者 BerbaSoft，教程为公有领域）：https://berbasoft.com/simplegametutorials/love/snake
-- 选品来源：Simple Game Tutorials、GitHub Trending 每日榜、itch.io 的 open-source 标签、Ludum Dare 官方仓库。
-- 本页面为原生 JavaScript 独立实现，未包含教程的 Lua 或 Python 源文件。
+- 贪吃蛇规则与实现思路参考 Simple Game Tutorials 的 Snake 教程（LÖVE 11 / Pygame Zero 1.2，作者 BerbaSoft，教程为公有领域）：https://berbasoft.com/simplegametutorials/love/snake
+- 2048 由 Gabriele Cirulli 于 2014 年发布，原作为 MIT 许可；本站为独立实现，未复用原作代码或素材。
+- Paddle Duel、Pong、打砖块、俄罗斯方块等为经典公开规则的原生实现，未复用第三方代码或素材。
+- 五子棋、四子连珠、井字棋、数独、推箱子、扫雷、Wordle、Hangman 等为公开玩法规则的独立实现。
+- 21 点、轮盘、视频扑克为业界公开通用规则的独立实现（无品牌、无版权素材），仅作为免费演示。
+- 本站页面为原生 JavaScript 独立实现，未包含任何教程的 Lua 或 Python 源文件。
 
 ## 链接
 
-- 首页：https://snake-classic.my-fullstack-app.workers.dev/
-- Sitemap：https://snake-classic.my-fullstack-app.workers.dev/sitemap.xml
-- Robots：https://snake-classic.my-fullstack-app.workers.dev/robots.txt
+- 首页：https://snake-classic-casino.netlify.app/
+- 街机合集：https://snake-classic-casino.netlify.app/arcade/
+- 娱乐场演示：https://snake-classic-casino.netlify.app/casino/
+- Sitemap：https://snake-classic-casino.netlify.app/sitemap.xml
+- Robots：https://snake-classic-casino.netlify.app/robots.txt
