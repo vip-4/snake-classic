@@ -232,6 +232,7 @@ kbd {
   display: flex;
   gap: 6px;
   flex-wrap: wrap;
+  align-content: center;
 }
 
 .nav nav a {
@@ -1133,13 +1134,22 @@ tbody tr:last-child td {
 }
 
 @media (max-width: 480px) {
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px 12px;
+    padding: 7px 0;
+  }
+
   .nav nav {
+    width: 100%;
+    justify-content: center;
     gap: 2px;
   }
 
   .nav nav a {
-    font-size: 0.78rem;
-    padding: 5px 6px;
+    font-size: 0.76rem;
+    padding: 5px 5px;
   }
 
   .brand-text em {
