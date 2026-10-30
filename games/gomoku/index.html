@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>五子棋 Gomoku - 免费在线玩经典策略棋 | Snake Classic</title>
+  <meta name="description" content="免费在线五子棋：15×15 棋盘，支持人机对战（3 档 AI）与双人对战。包含禁手规则、悔棋、计时。键盘与触屏操作。">
+  <meta name="keywords" content="五子棋,Gomoku,在线五子棋,免费网页游戏,经典策略棋,HTML5 游戏,离线游戏">
+  <meta name="author" content="Snake Classic">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b1020">
+  <link rel="canonical" href="https://snake-classic-casino.netlify.app/games/gomoku/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Snake Classic Arcade">
+  <meta property="og:title" content="五子棋 Gomoku - 免费在线玩经典策略棋">
+  <meta property="og:description" content="15×15 棋盘，人机对战（3 档 AI）与双人对战，禁手规则，悔棋，计时。">
+  <meta property="og:url" content="https://snake-classic-casino.netlify.app/games/gomoku/">
+  <meta property="og:image" content="https://snake-classic-casino.netlify.app/assets/arcade-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="五子棋 Gomoku：15×15 棋盘">
+  <meta property="og:locale" content="zh_CN">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="五子棋 Gomoku - 免费在线玩经典策略棋">
+  <meta name="twitter:description" content="15×15 棋盘，人机对战（3 档 AI）与双人对战，禁手规则，悔棋，计时。">
+  <meta name="twitter:image" content="https://snake-classic-casino.netlify.app/assets/arcade-og.png">
+
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <link rel="stylesheet" href="../../assets/style.css?v=20261030-1">
+  <link rel="stylesheet" href="../../assets/shared/arcade.css?v=20261027-2">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://snake-classic-casino.netlify.app/games/gomoku/#webpage",
+        "url": "https://snake-classic-casino.netlify.app/games/gomoku/",
+        "name": "五子棋 Gomoku - 免费在线玩经典策略棋",
+        "description": "15×15 棋盘五子棋，人机对战与双人对战，禁手规则，悔棋。",
+        "isPartOf": { "@id": "https://snake-classic-casino.netlify.app/#website" },
+        "about": { "@id": "https://snake-classic-casino.netlify.app/games/gomoku/#game" },
+        "primaryImageOfPage": { "@type": "ImageObject", "url": "https://snake-classic-casino.netlify.app/assets/arcade-og.png", "width": 1200, "height": 630 },
+        "datePublished": "2026-10-27", "dateModified": "2026-10-30", "inLanguage": "zh-CN",
+        "breadcrumb": { "@id": "https://snake-classic-casino.netlify.app/games/gomoku/#breadcrumb" },
+        "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".answer-box", ".faq-answer"] }
+      },
+      {
+        "@type": "VideoGame",
+        "@id": "https://snake-classic-casino.netlify.app/games/gomoku/#game",
+        "name": "五子棋",
+        "alternateName": "Gomoku",
+        "description": "免费的浏览器五子棋。15×15 棋盘，人机对战（3 档 AI）与双人对战，禁手规则，悔棋。",
+        "url": "https://snake-classic-casino.netlify.app/games/gomoku/",
+        "image": "https://snake-classic-casino.netlify.app/assets/arcade-og.png",
+        "genre": ["Strategy", "Board", "Casual"],
+        "gamePlatform": ["Web browser", "Desktop", "Mobile"],
+        "applicationCategory": "Game",
+        "operatingSystem": "Any",
+        "playMode": "SinglePlayer",
+        "numberOfPlayers": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 2 },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY", "availability": "https://schema.org/InStock" },
+        "license": "https://opensource.org/licenses/MIT",
+        "author": { "@id": "https://snake-classic-casino.netlify.app/#publisher" },
+        "publisher": { "@id": "https://snake-classic-casino.netlify.app/#publisher" },
+        "datePublished": "2026-10-27", "dateModified": "2026-10-30", "inLanguage": "zh-CN", "isAccessibleForFree": true
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://snake-classic-casino.netlify.app/games/gomoku/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://snake-classic-casino.netlify.app/" },
+          { "@type": "ListItem", "position": 2, "name": "游戏合集", "item": "https://snake-classic-casino.netlify.app/arcade/" },
+          { "@type": "ListItem", "position": 3, "name": "五子棋", "item": "https://snake-classic-casino.netlify.app/games/gomoku/" }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://snake-classic-casino.netlify.app/games/gomoku/#howto",
+        "name": "如何玩五子棋",
+        "description": "先连成五子者胜。",
+        "totalTime": "PT10M",
+        "step": [
+          { "@type": "HowToStep", "position": 1, "name": "落子", "text": "点击棋盘交叉点落子。" },
+          { "@type": "HowToStep", "position": 2, "name": "连五", "text": "先连成五子（横、竖、斜）者胜。" },
+          { "@type": "HowToStep", "position": 3, "name": "禁手", "text": "黑棋有三三、四四、长连禁手。" },
+          { "@type": "HowToStep", "position": 4, "name": "悔棋", "text": "按 Z 悔棋，按 R 重新开始。" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://snake-classic-casino.netlify.app/games/gomoku/#faq",
+        "mainEntity": [
+          { "@type": "Question", "name": "五子棋怎么操作？", "acceptedAnswer": { "@type": "Answer", "text": "点击棋盘交叉点落子。先连成五子者胜。" } },
+          { "@type": "Question", "name": "什么是禁手？", "acceptedAnswer": { "@type": "Answer", "text": "黑棋不能下出三三（两个三连）、四四（两个四连）或长连（六子以上）。" } },
+          { "@type": "Question", "name": "AI 有几档难度？", "acceptedAnswer": { "@type": "Answer", "text": "三档：轻松、标准、挑战。" } },
+          { "@type": "Question", "name": "成绩保存在哪里？", "acceptedAnswer": { "@type": "Answer", "text": "胜负记录保存在浏览器 localStorage 中。" } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="../../arcade/">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <rect x="2" y="2" width="28" height="28" rx="7" fill="#101a33"/>
+          <rect x="7" y="18" width="6" height="6" rx="1.6" fill="#7cff6b"/>
+          <rect x="13" y="18" width="6" height="6" rx="1.6" fill="#7cff6b"/>
+          <rect x="13" y="12" width="6" height="6" rx="1.6" fill="#a8ff9c"/>
+          <rect x="19" y="12" width="6" height="6" rx="1.6" fill="#7cff6b"/>
+          <circle cx="23" cy="7" r="2.4" fill="#ff5a7a"/>
+        </svg>
+        <span class="brand-text">SNAKE<em>CLASSIC</em></span>
+        <span class="brand-arcade">ARCADE</span>
+        <span class="sr-only"> 返回经典街机合集</span>
+      </a>
+      <nav aria-label="主导航">
+        <a href="../../">贪吃蛇</a>
+        <a href="../../arcade/">游戏合集</a>
+        <a href="#howto">玩法</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <nav class="wrap" aria-label="面包屑">
+      <ol class="breadcrumb">
+        <li><a href="../../">首页</a></li>
+        <li><a href="../../arcade/">游戏合集</a></li>
+        <li aria-current="page">五子棋</li>
+      </ol>
+    </nav>
+
+    <section class="game-hero wrap" aria-labelledby="hero-title">
+      <div class="game-copy">
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> 策略 · 棋类 · 1-2 人</p>
+        <h1 id="hero-title">五子棋 <span class="grad">免费在线玩 Gomoku</span></h1>
+        <p class="lede">15×15 棋盘，人机对战（3 档 AI）与双人对战。包含禁手规则、悔棋、计时。</p>
+        <p class="en-line" lang="en">A free browser Gomoku game. 15×15 board, AI (3 levels) or 2-player, with forbidden moves and undo.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#play">开始游戏</a>
+          <a class="btn btn-ghost" href="#howto">查看规则</a>
+        </div>
+        <ul class="game-facts" aria-label="游戏参数">
+          <li><strong>15×15</strong><span>棋盘</span></li>
+          <li><strong>3 档</strong><span>AI 难度</span></li>
+          <li><strong>5 子</strong><span>连珠获胜</span></li>
+          <li><strong>0</strong><span>第三方依赖</span></li>
+        </ul>
+      </div>
+
+      <div class="play-panel game-panel" id="play">
+        <div class="hud">
+          <div class="hud-item"><span>模式</span><strong id="mode">人机</strong></div>
+          <div class="hud-item"><span>难度</span><strong id="difficulty">标准</strong></div>
+          <div class="hud-item"><span>步数</span><strong id="move-count">0</strong></div>
+          <div class="hud-actions">
+            <div class="segmented segmented--cyan" role="group" aria-label="游戏模式">
+              <button type="button" data-mode="ai" aria-pressed="true">人机</button>
+              <button type="button" data-mode="pvp" aria-pressed="false">双人</button>
+            </div>
+            <div class="segmented" role="group" aria-label="AI 难度">
+              <button type="button" data-diff="easy" aria-pressed="false">轻松</button>
+              <button type="button" data-diff="normal" aria-pressed="true">标准</button>
+              <button type="button" data-diff="hard" aria-pressed="false">挑战</button>
+            </div>
+            <button class="icon-btn" id="undo" type="button" title="悔棋">↩ <span>悔棋</span></button>
+            <button class="icon-btn" id="restart" type="button" title="重新开始">↻ <span>重开</span></button>
+          </div>
+        </div>
+
+        <div class="gomoku-stage">
+          <canvas id="gomoku-canvas" width="450" height="450" role="img" tabindex="0" aria-label="五子棋棋盘"></canvas>
+        </div>
+
+        <p class="game-note" style="margin:8px 2px 0">点击落子 · Z 悔棋 · R 重开 · 黑棋先行</p>
+        <p class="sr-only" id="live" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap section-grid">
+        <div>
+          <p class="eyebrow">直接回答</p>
+          <h2 id="about-title">五子棋是什么？</h2>
+          <p class="answer-box"><strong>五子棋（Gomoku）</strong>是一个免费的浏览器策略棋游戏。15×15 棋盘，黑棋先行，先连成五子（横、竖、斜）者胜。支持人机对战（3 档 AI）与双人对战，包含禁手规则（三三、四四、长连）。</p>
+          <p>游戏使用 Canvas 2D 渲染。AI 使用 Minimax 算法 + Alpha-Beta 剪枝 + 评估函数。支持悔棋和重新开始。</p>
+          <p class="en-line" lang="en"><strong>In English:</strong> Gomoku is a free browser strategy board game. 15×15 board, connect five to win.</p>
+        </div>
+        <aside class="fact-card" aria-label="关键信息">
+          <h3>关键信息</h3>
+          <dl>
+            <div><dt>类型</dt><dd>策略 / 棋类</dd></div>
+            <div><dt>棋盘</dt><dd>15 × 15</dd></div>
+            <div><dt>模式</dt><dd>人机 / 双人</dd></div>
+            <div><dt>AI 难度</dt><dd>3 档</dd></div>
+            <div><dt>技术</dt><dd>Canvas 2D + 原生 JS</dd></div>
+            <div><dt>更新日期</dt><dd><time datetime="2026-10-30">2026-10-30</time></dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="howto" aria-labelledby="howto-title">
+      <div class="wrap section-grid section-grid--wide">
+        <div>
+          <p class="eyebrow">上手 30 秒</p>
+          <h2 id="howto-title">怎么玩五子棋</h2>
+          <ol class="steps">
+            <li><strong>落子：</strong>点击棋盘交叉点落子。</li>
+            <li><strong>连五：</strong>先连成五子（横、竖、斜）者胜。</li>
+            <li><strong>禁手：</strong>黑棋不能下出三三、四四、长连。</li>
+            <li><strong>悔棋：</strong>按 Z 悔棋，按 R 重新开始。</li>
+          </ol>
+        </div>
+        <aside class="rules-card" aria-labelledby="rules-title">
+          <h3 id="rules-title">核心规则</h3>
+          <ul>
+            <li>15×15 棋盘，黑棋先行</li>
+            <li>先连成五子（横、竖、斜）者胜</li>
+            <li>黑棋禁手：三三、四四、长连</li>
+            <li>白棋无禁手</li>
+            <li>支持人机对战和双人对战</li>
+          </ul>
+          <p class="rules-note">五子棋是经典游戏的原生实现，未复用第三方代码。</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <p class="eyebrow">常见问题</p>
+        <h2 id="faq-title">关于五子棋</h2>
+        <div class="faq-list">
+          <details><summary><h3>五子棋怎么操作？</h3></summary><p class="faq-answer">点击棋盘交叉点落子。先连成五子者胜。</p></details>
+          <details><summary><h3>什么是禁手？</h3></summary><p class="faq-answer">黑棋不能下出三三（两个三连）、四四（两个四连）或长连（六子以上）。</p></details>
+          <details><summary><h3>AI 有几档难度？</h3></summary><p class="faq-answer">三档：轻松、标准、挑战。</p></details>
+          <details><summary><h3>成绩保存在哪里？</h3></summary><p class="faq-answer">胜负记录保存在浏览器 localStorage 中。</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="related" aria-labelledby="related-title">
+      <div class="wrap">
+        <p class="eyebrow">继续玩</p>
+        <h2 id="related-title">其他街机小游戏</h2>
+        <div class="related-grid">
+          <a class="related-card" href="../../"><span aria-hidden="true">🐍</span><strong>贪吃蛇经典版</strong><small>休闲 · 穿墙模式</small></a>
+          <a class="related-card" href="../merge-2048/"><span aria-hidden="true">2048</span><strong>2048 经典版</strong><small>益智 · 数字合并</small></a>
+          <a class="related-card" href="../wordle/"><span aria-hidden="true">🔤</span><strong>Wordle 猜词</strong><small>益智 · 每日单词</small></a>
+          <a class="related-card" href="../tetris/"><span aria-hidden="true">🧱</span><strong>俄罗斯方块</strong><small>益智 · 经典方块</small></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <a class="brand" href="../../arcade/">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+            <rect x="2" y="2" width="28" height="28" rx="7" fill="#101a33"/>
+            <rect x="7" y="18" width="6" height="6" rx="1.6" fill="#7cff6b"/>
+            <rect x="13" y="18" width="6" height="6" rx="1.6" fill="#7cff6b"/>
+            <rect x="13" y="12" width="6" height="6" rx="1.6" fill="#a8ff9c"/>
+            <rect x="19" y="12" width="6" height="6" rx="1.6" fill="#7cff6b"/>
+            <circle cx="23" cy="7" r="2.4" fill="#ff5a7a"/>
+          </svg>
+          <span class="brand-text">SNAKE<em>CLASSIC</em></span>
+        </a>
+        <p class="footer-note">经典街机合集 · 五子棋</p>
+      </div>
+      <nav aria-label="页脚导航">
+        <a href="../../">贪吃蛇</a>
+        <a href="../../arcade/">游戏合集</a>
+        <a href="../wordle/">Wordle</a>
+        <a href="../tetris/">俄罗斯方块</a>
+        <a href="../breakout/">打砖块</a>
+      </nav>
+      <div class="footer-meta">
+        <p>代码 MIT · 内容 CC BY 4.0</p>
+        <p>最后更新：<time datetime="2026-10-30">2026-10-30</time></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/shared/arcade.js?v=20261027-2" data-root="../../" defer></script>
+  <script src="../../assets/games/gomoku.js?v=20261030-1" defer></script>
+</body>
+</html>
