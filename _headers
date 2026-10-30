@@ -5,7 +5,28 @@
   Permissions-Policy: geolocation=(), microphone=(), camera=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains
 
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
 /index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/arcade/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/arcade/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/games/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/games/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/casino/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/casino/*
   Cache-Control: public, max-age=0, must-revalidate
 
 /404
